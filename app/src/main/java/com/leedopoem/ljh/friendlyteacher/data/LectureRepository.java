@@ -3,15 +3,13 @@ package com.leedopoem.ljh.friendlyteacher.data;
 import android.content.Context;
 import android.util.Log;
 
-import com.leedopoem.ljh.friendlyteacher.data.source.Class;
 import com.leedopoem.ljh.friendlyteacher.data.source.local.ILocalDataSource;
 import com.leedopoem.ljh.friendlyteacher.data.source.local.LectureLocalDataSource;
 import com.leedopoem.ljh.friendlyteacher.data.source.remote.IRemoteDataSource;
 import com.leedopoem.ljh.friendlyteacher.data.source.remote.LectureRemoteDataSource;
-import com.leedopoem.ljh.friendlyteacher.entity.Book;
-import com.leedopoem.ljh.friendlyteacher.entity.Lecture;
-import com.leedopoem.ljh.friendlyteacher.entity.Result;
-import com.leedopoem.ljh.friendlyteacher.entity.User;
+import com.leedopoem.ljh.friendlyteacher.data.entity.Lecture;
+import com.leedopoem.ljh.friendlyteacher.data.entity.Result;
+import com.leedopoem.ljh.friendlyteacher.data.entity.User;
 import com.leedopoem.ljh.friendlyteacher.utils.NetworkAvailableUtil;
 import com.leedopoem.ljh.friendlyteacher.utils.RxConverter;
 
@@ -64,7 +62,7 @@ public class LectureRepository implements ILocalDataSource,IRemoteDataSource {
     }
 
     @Override
-    public Observable<Result> getUserInformation(String uid) {
+    public Observable<User> getUserInformation(String uid) {
         if (netAvailable){
             return mRemoteDataSource.getUserInformation(uid);
         }
@@ -78,7 +76,7 @@ public class LectureRepository implements ILocalDataSource,IRemoteDataSource {
             mLocalDataSource.save(lectures.blockingSingle());
             return lectures;
         }
-        return mLocalDataSource.getAllLecture();
+        return mLocalDataSource.getAllLectures();
     }
 
     @Override

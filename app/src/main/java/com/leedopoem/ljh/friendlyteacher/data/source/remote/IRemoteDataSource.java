@@ -1,8 +1,8 @@
 package com.leedopoem.ljh.friendlyteacher.data.source.remote;
 
-import com.leedopoem.ljh.friendlyteacher.entity.Lecture;
-import com.leedopoem.ljh.friendlyteacher.entity.Result;
-import com.leedopoem.ljh.friendlyteacher.entity.User;
+import com.leedopoem.ljh.friendlyteacher.data.entity.Lecture;
+import com.leedopoem.ljh.friendlyteacher.data.entity.Result;
+import com.leedopoem.ljh.friendlyteacher.data.entity.User;
 
 import java.util.List;
 
@@ -22,7 +22,7 @@ public interface IRemoteDataSource {
     //修改用户信息
     Observable<Result> alterUserInformation(User user);
     //获得用户信息
-    Observable<Result> getUserInformation(String uid);
+    Observable<User> getUserInformation(String uid);
 
     //课程
     //获得所有课程

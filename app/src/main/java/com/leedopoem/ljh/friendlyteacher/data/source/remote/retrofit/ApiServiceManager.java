@@ -3,10 +3,10 @@ package com.leedopoem.ljh.friendlyteacher.data.source.remote.retrofit;
 import com.google.gson.GsonBuilder;
 import com.leedopoem.ljh.friendlyteacher.data.source.remote.IRemoteDataSource;
 import com.leedopoem.ljh.friendlyteacher.data.source.remote.retrofit.api.LectureService;
-import com.leedopoem.ljh.friendlyteacher.entity.Book;
-import com.leedopoem.ljh.friendlyteacher.entity.Lecture;
-import com.leedopoem.ljh.friendlyteacher.entity.Result;
-import com.leedopoem.ljh.friendlyteacher.entity.User;
+import com.leedopoem.ljh.friendlyteacher.data.entity.Book;
+import com.leedopoem.ljh.friendlyteacher.data.entity.Lecture;
+import com.leedopoem.ljh.friendlyteacher.data.entity.Result;
+import com.leedopoem.ljh.friendlyteacher.data.entity.User;
 
 import java.util.List;
 
@@ -52,7 +52,7 @@ public class ApiServiceManager implements IRemoteDataSource{
     }
 
     @Override
-    public Observable<Result> getUserInformation(String uid) {
+    public Observable<User> getUserInformation(String uid) {
         return lectureService.getUserInformation(uid);
     }
 

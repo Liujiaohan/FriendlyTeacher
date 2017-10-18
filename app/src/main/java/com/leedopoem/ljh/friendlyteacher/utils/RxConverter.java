@@ -1,10 +1,6 @@
 package com.leedopoem.ljh.friendlyteacher.utils;
 
-import com.leedopoem.ljh.friendlyteacher.data.source.Class;
-
 import io.reactivex.Observable;
-import io.reactivex.ObservableOnSubscribe;
-import io.reactivex.Scheduler;
 import io.reactivex.schedulers.Schedulers;
 
 /**

@@ -1,4 +1,4 @@
-package com.leedopoem.ljh.friendlyteacher.entity;
+package com.leedopoem.ljh.friendlyteacher.data.entity;
 
 import java.util.List;
 

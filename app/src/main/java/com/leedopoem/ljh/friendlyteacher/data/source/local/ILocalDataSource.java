@@ -1,10 +1,7 @@
 package com.leedopoem.ljh.friendlyteacher.data.source.local;
 
-import com.leedopoem.ljh.friendlyteacher.entity.Book;
-import com.leedopoem.ljh.friendlyteacher.entity.Lecture;
-import com.leedopoem.ljh.friendlyteacher.entity.User;
+import com.leedopoem.ljh.friendlyteacher.data.entity.Lecture;
 
-import java.util.LinkedHashSet;
 import java.util.List;
 
 import io.reactivex.Observable;

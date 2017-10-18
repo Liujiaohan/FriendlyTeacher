@@ -1,15 +1,14 @@
 package com.leedopoem.ljh.friendlyteacher.data.source.remote.retrofit.api;
 
-import com.leedopoem.ljh.friendlyteacher.entity.Book;
-import com.leedopoem.ljh.friendlyteacher.entity.Lecture;
-import com.leedopoem.ljh.friendlyteacher.entity.Result;
-import com.leedopoem.ljh.friendlyteacher.entity.User;
+import com.leedopoem.ljh.friendlyteacher.data.entity.Book;
+import com.leedopoem.ljh.friendlyteacher.data.entity.Lecture;
+import com.leedopoem.ljh.friendlyteacher.data.entity.Result;
+import com.leedopoem.ljh.friendlyteacher.data.entity.User;
 
 import java.util.List;
-import java.util.Map;
 
 import io.reactivex.Observable;
-import retrofit2.Call;;
+;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
@@ -17,7 +16,6 @@ import retrofit2.http.POST;
 import retrofit2.http.PUT;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
-import retrofit2.http.QueryMap;
 
 /**
  * Created by ljh on 17-9-28.
@@ -37,13 +35,13 @@ public interface LectureService {
     //用户
     //登录
     @GET("/session")
-    Observable<Result> login(@Query("uid") String uid,@Query("password") String password);
+    Observable<Result> login(@Query("email") String email,@Query("password") String password);
     //修改用户信息
     @PUT("/user/{uid}")
     Observable<Result> alterUserInformation(@Path("user") String uid, @Body User user);
     //获取用户信息
     @GET("/user/{uid}")
-    Observable<Result> getUserInformation(@Path("uid") String uid);
+    Observable<User> getUserInformation(@Path("uid") String uid);
 
 
     //课程

@@ -1,9 +1,6 @@
 package com.leedopoem.ljh.friendlyteacher.data.source.local;
 
-import com.leedopoem.ljh.friendlyteacher.data.ILectureDataSource;
-import com.leedopoem.ljh.friendlyteacher.data.source.Class;
-import com.leedopoem.ljh.friendlyteacher.entity.Lecture;
-import com.leedopoem.ljh.friendlyteacher.entity.User;
+import com.leedopoem.ljh.friendlyteacher.data.entity.Lecture;
 
 import java.util.List;
 
@@ -28,8 +25,8 @@ public class LectureLocalDataSource implements ILocalDataSource {
     }
 
     @Override
-    public Observable<List<Lecture>> getAllLecture() {
-        return lectureDaoManager.getAllLecture();
+    public Observable<List<Lecture>> getAllLectures() {
+        return lectureDaoManager.getAllLectures();
     }
 
     @Override

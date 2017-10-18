@@ -1,14 +1,11 @@
 package com.leedopoem.ljh.friendlyteacher.homepage;
 
-import android.support.annotation.NonNull;
-
 import com.leedopoem.ljh.friendlyteacher.data.LectureRepository;
-import com.leedopoem.ljh.friendlyteacher.entity.Lecture;
+import com.leedopoem.ljh.friendlyteacher.data.entity.Lecture;
 import com.leedopoem.ljh.friendlyteacher.enums.LectureType;
 
 import java.util.List;
 
-import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.functions.Consumer;

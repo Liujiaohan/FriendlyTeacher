@@ -3,8 +3,9 @@ package com.leedopoem.ljh.friendlyteacher.base;
 import android.app.Application;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.leedopoem.ljh.friendlyteacher.data.source.DaoMaster;
-import com.leedopoem.ljh.friendlyteacher.data.source.DaoSession;
+import com.leedopoem.ljh.friendlyteacher.data.entity.DaoMaster;
+import com.leedopoem.ljh.friendlyteacher.data.entity.DaoSession;
+
 
 /**
  * Created by ljh on 17-9-27.

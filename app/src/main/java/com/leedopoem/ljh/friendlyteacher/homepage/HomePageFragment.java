@@ -3,7 +3,7 @@ package com.leedopoem.ljh.friendlyteacher.homepage;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
-import com.leedopoem.ljh.friendlyteacher.entity.Lecture;
+import com.leedopoem.ljh.friendlyteacher.data.entity.Lecture;
 
 import java.util.List;
 

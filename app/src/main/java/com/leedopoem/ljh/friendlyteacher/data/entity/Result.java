@@ -1,4 +1,4 @@
-package com.leedopoem.ljh.friendlyteacher.entity;
+package com.leedopoem.ljh.friendlyteacher.data.entity;
 
 import lombok.Data;
 
@@ -8,7 +8,7 @@ import lombok.Data;
 
 @Data
 public class Result {
-    Message message;
+    private Message message;
 
     public Result(Message message) {
         this.message = message;

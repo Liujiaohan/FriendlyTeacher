@@ -1,6 +1,4 @@
-package com.leedopoem.ljh.friendlyteacher.entity;
-
-import com.leedopoem.ljh.friendlyteacher.enums.Gender;
+package com.leedopoem.ljh.friendlyteacher.data.entity;
 
 import lombok.Data;
 

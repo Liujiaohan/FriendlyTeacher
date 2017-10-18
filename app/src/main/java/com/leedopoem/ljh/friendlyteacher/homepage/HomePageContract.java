@@ -2,7 +2,7 @@ package com.leedopoem.ljh.friendlyteacher.homepage;
 
 import com.leedopoem.ljh.friendlyteacher.base.BasePresenter;
 import com.leedopoem.ljh.friendlyteacher.base.BaseView;
-import com.leedopoem.ljh.friendlyteacher.entity.Lecture;
+import com.leedopoem.ljh.friendlyteacher.data.entity.Lecture;
 import com.leedopoem.ljh.friendlyteacher.enums.LectureType;
 
 import java.util.List;
