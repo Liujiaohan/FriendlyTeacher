@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/category_it"
+        android:title="编程">
+    </item>
+    <item android:id="@+id/category_photography"
+        android:title="摄影">
+    </item>
+    <item android:id="@+id/category_draw"
+        android:title="绘画">
+    </item>
+    <item android:id="@+id/category_music"
+        android:title="音乐">
+    </item>
+    <item android:id="@+id/category_software"
+        android:title="软件">
+    </item>
+</menu>

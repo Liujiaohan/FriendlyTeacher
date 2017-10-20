@@ -11,7 +11,7 @@ import io.reactivex.Observable;
  */
 
 public class LectureLocalDataSource implements ILocalDataSource {
-    private LectureDaoManager lectureDaoManager= LectureDaoManager.getINSTANCE();
+    private LectureDao lectureDao = LectureDao.getINSTANCE();
     private static LectureLocalDataSource INSTANCE=null;
 
     public LectureLocalDataSource() {
@@ -26,41 +26,41 @@ public class LectureLocalDataSource implements ILocalDataSource {
 
     @Override
     public Observable<List<Lecture>> getAllLectures() {
-        return lectureDaoManager.getAllLectures();
+        return lectureDao.getAllLectures();
     }
 
     @Override
     public Observable<List<Lecture>> getLecturesByUser(String uid) {
-        return lectureDaoManager.getLecturesByUser(uid);
+        return lectureDao.getLecturesByUser(uid);
     }
 
     @Override
     public Observable<Boolean> save(List<Lecture> lectures) {
-        return lectureDaoManager.save(lectures);
+        return lectureDao.save(lectures);
     }
 
     @Override
     public Observable<Boolean> save(Lecture lecture) {
-        return lectureDaoManager.save(lecture);
+        return lectureDao.save(lecture);
     }
 
     @Override
     public Observable<Boolean> update(List<Lecture> lectures) {
-        return lectureDaoManager.update(lectures);
+        return lectureDao.update(lectures);
     }
 
     @Override
     public Observable<Boolean> update(Lecture lecture) {
-        return lectureDaoManager.update(lecture);
+        return lectureDao.update(lecture);
     }
 
     @Override
     public Observable<Boolean> delete(Lecture lecture) {
-        return lectureDaoManager.delete(lecture);
+        return lectureDao.delete(lecture);
     }
 
     @Override
     public Observable<Boolean> delete(List<Lecture> lectures) {
-        return lectureDaoManager.delete(lectures);
+        return lectureDao.delete(lectures);
     }
 }

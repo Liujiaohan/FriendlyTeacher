@@ -11,8 +11,10 @@ import com.leedopoem.ljh.friendlyteacher.data.entity.User;
 import java.util.List;
 
 import io.reactivex.Observable;
+import io.reactivex.Scheduler;
+import io.reactivex.schedulers.Schedulers;
 import retrofit2.Retrofit;
-import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
@@ -24,9 +26,9 @@ public class ApiServiceManager implements IRemoteDataSource{
     public LectureService lectureService;
     public ApiServiceManager() {
         retrofit=new Retrofit.Builder()
-                .baseUrl("https://api.douban.com/v2/")
+                .baseUrl("http://188.166.235.146:8080/spittr/")
                 .addConverterFactory(GsonConverterFactory.create(new GsonBuilder().create()))
-                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build();
         lectureService=retrofit.create(LectureService.class);
     }
@@ -43,46 +45,53 @@ public class ApiServiceManager implements IRemoteDataSource{
 
     @Override
     public Observable<Result> login(String uid, String password) {
-        return lectureService.login(uid,password);
+        return lectureService.login(uid,password).subscribeOn(Schedulers.io());
     }
 
     @Override
     public Observable<Result> alterUserInformation(User user) {
-        return lectureService.alterUserInformation(user.getUid(),user);
+        return lectureService.alterUserInformation(user.getUid(),user).subscribeOn(Schedulers.io());
     }
 
     @Override
     public Observable<User> getUserInformation(String uid) {
-        return lectureService.getUserInformation(uid);
+        return lectureService.getUserInformation(uid).subscribeOn(Schedulers.io());
     }
 
     @Override
     public Observable<List<Lecture>> getAllLectures() {
-        return lectureService.getALlLectures();
+        Observable<List<Lecture>> list=null;
+        try {
+            list=lectureService.getAllLectures().subscribeOn(Schedulers.io());
+        }catch (Exception e){
+            ExceptionHandler.netWorkError(e);
+        }
+        return list;
     }
 
     @Override
     public Observable<Result> publishLecture(Lecture lecture) {
-        return lectureService.publishLecture(lecture);
+        return lectureService.publishLecture(lecture).subscribeOn(Schedulers.io());
     }
 
     @Override
     public Observable<List<Lecture>> getLecturesByUid(String uid) {
-        return lectureService.getLecturesByUid(uid);
+        return lectureService.getLecturesByUid(uid).subscribeOn(Schedulers.io());
     }
 
     @Override
     public Observable<Lecture> getLectureByLid(String lid) {
-        return lectureService.getLectureByLid(lid);
+        return lectureService.getLectureByLid(lid).subscribeOn(Schedulers.io());
     }
 
     @Override
     public Observable<Result> deleteLecture(String lid) {
-        return lectureService.deleteLecture(lid);
+        return lectureService.deleteLecture(lid).subscribeOn(Schedulers.io());
     }
 
+    //注意 此为测试
     @Override
     public Observable<Result> alterLectureInformation(Lecture lecture) {
-        return lectureService.alterLectureInformation("1",lecture);
+        return lectureService.alterLectureInformation("1",lecture).subscribeOn(Schedulers.io());
     }
 }

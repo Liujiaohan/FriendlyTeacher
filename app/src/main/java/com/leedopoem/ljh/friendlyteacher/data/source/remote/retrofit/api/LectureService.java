@@ -8,7 +8,7 @@ import com.leedopoem.ljh.friendlyteacher.data.entity.User;
 import java.util.List;
 
 import io.reactivex.Observable;
-;
+
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
@@ -29,15 +29,15 @@ public interface LectureService {
                                    @Query("start") int start, @Query("count") int count);
 
     //注册
-    @POST("/user")
+    @POST("user")
     Observable<Result> registAsUser(@Body User user);
 
     //用户
     //登录
-    @GET("/session")
+    @GET("session")
     Observable<Result> login(@Query("email") String email,@Query("password") String password);
     //修改用户信息
-    @PUT("/user/{uid}")
+    @PUT("user/{uid}")
     Observable<Result> alterUserInformation(@Path("user") String uid, @Body User user);
     //获取用户信息
     @GET("/user/{uid}")
@@ -46,10 +46,10 @@ public interface LectureService {
 
     //课程
     //获取所有课程信息
-    @GET("/lectures")
-    Observable<List<Lecture>> getALlLectures();
+    @GET("lectures")
+    Observable<List<Lecture>> getAllLectures();
     //发布某个课程
-    @POST("/lecture")
+    @POST("lecture")
     Observable<Result> publishLecture(@Body Lecture lecture);
     //获取某个用户的课程
     @GET("lecture/{uid}")

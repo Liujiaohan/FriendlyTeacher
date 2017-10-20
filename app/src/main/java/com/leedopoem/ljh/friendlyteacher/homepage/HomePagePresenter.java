@@ -2,12 +2,17 @@ package com.leedopoem.ljh.friendlyteacher.homepage;
 
 import com.leedopoem.ljh.friendlyteacher.data.LectureRepository;
 import com.leedopoem.ljh.friendlyteacher.data.entity.Lecture;
-import com.leedopoem.ljh.friendlyteacher.enums.LectureType;
+
+
+import org.reactivestreams.Subscriber;
+import org.reactivestreams.Subscription;
 
 import java.util.List;
 
+import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
+import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
 
 /**
@@ -26,6 +31,7 @@ public class HomePagePresenter implements HomePageContract.Presenter {
         this.mRepository = repository;
         this.mHomepageView = homepageView;
         mHomepageView.setPresenter(this);
+        mCompositeDisposable=new CompositeDisposable();
     }
 
     @Override
@@ -40,30 +46,27 @@ public class HomePagePresenter implements HomePageContract.Presenter {
 
     @Override
     public void loadRecommendLecture() {
-        mCompositeDisposable.add(mRepository.getAllLectures()
-        .observeOn(AndroidSchedulers.mainThread())
-        .subscribe(new Consumer<List<Lecture>>() {
-            @Override
-            public void accept(List<Lecture> lectures) throws Exception {
-                mHomepageView.showLectures(lectures);
-            }
-        }));
+        Disposable disposable=mRepository
+                .getAllLectures()
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Consumer<List<Lecture>>(){
+                    @Override
+                    public void accept(List<Lecture> lectures) throws Exception {
+                        mHomepageView.showLectures(lectures);
+                    }
+                });
+
+        mCompositeDisposable.add(disposable);
     }
 
     @Override
-    public void loadLectureByType(LectureType lectureType) {
+    public void addNewLecture() {
+
     }
 
     @Override
-    public void publishLecture(Lecture lecture) {
-    }
+    public void openLectureDetails() {
 
-    @Override
-    public void communicateModule() {
-    }
-
-    @Override
-    public void userInformationCenter() {
     }
 
 }

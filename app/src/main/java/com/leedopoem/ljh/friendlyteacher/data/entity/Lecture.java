@@ -1,19 +1,17 @@
 package com.leedopoem.ljh.friendlyteacher.data.entity;
 
-import org.greenrobot.greendao.annotation.Entity;
-import org.greenrobot.greendao.annotation.Id;
 
+import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
 import lombok.Data;
-import org.greenrobot.greendao.annotation.Generated;
 
 /**
  * Created by ljh on 17-10-2.
  */
 
-@Data
-@Entity
-public class Lecture {
-    @Id(autoincrement = true)
+public class Lecture extends RealmObject{
+
+    @PrimaryKey
     private Long id;
     private String uid;
     private String lectureName;
@@ -34,71 +32,6 @@ public class Lecture {
         this.introduction = introduction;
     }
 
-    public String getIntroduction() {
-        return this.introduction;
-    }
-
-    public void setIntroduction(String introduction) {
-        this.introduction = introduction;
-    }
-
-    public String getClassTime() {
-        return this.classTime;
-    }
-
-    public void setClassTime(String classTime) {
-        this.classTime = classTime;
-    }
-
-    public String getEndingTime() {
-        return this.endingTime;
-    }
-
-    public void setEndingTime(String endingTime) {
-        this.endingTime = endingTime;
-    }
-
-    public String getStartingTime() {
-        return this.startingTime;
-    }
-
-    public void setStartingTime(String startingTime) {
-        this.startingTime = startingTime;
-    }
-
-    public String getLocation() {
-        return this.location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
-    }
-
-    public String getLectureName() {
-        return this.lectureName;
-    }
-
-    public void setLectureName(String lectureName) {
-        this.lectureName = lectureName;
-    }
-
-    public String getUid() {
-        return this.uid;
-    }
-
-    public void setUid(String uid) {
-        this.uid = uid;
-    }
-
-    public Long getId() {
-        return this.id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    @Generated(hash = 168659645)
     public Lecture(Long id, String uid, String lectureName, String location,
             String startingTime, String endingTime, String classTime, String introduction) {
         this.id = id;
@@ -111,7 +44,70 @@ public class Lecture {
         this.introduction = introduction;
     }
 
-    @Generated(hash = 637726957)
     public Lecture() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
+
+    public String getLectureName() {
+        return lectureName;
+    }
+
+    public void setLectureName(String lectureName) {
+        this.lectureName = lectureName;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public String getStartingTime() {
+        return startingTime;
+    }
+
+    public void setStartingTime(String startingTime) {
+        this.startingTime = startingTime;
+    }
+
+    public String getEndingTime() {
+        return endingTime;
+    }
+
+    public void setEndingTime(String endingTime) {
+        this.endingTime = endingTime;
+    }
+
+    public String getClassTime() {
+        return classTime;
+    }
+
+    public void setClassTime(String classTime) {
+        this.classTime = classTime;
+    }
+
+    public String getIntroduction() {
+        return introduction;
+    }
+
+    public void setIntroduction(String introduction) {
+        this.introduction = introduction;
     }
 }

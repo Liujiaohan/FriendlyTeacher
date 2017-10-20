@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:fitsSystemWindows="true"
+    app:theme="@style/Widget.AppCompat.Light.ActionBar"
+    android:background="@color/colorPrimary">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+        <ImageButton
+            android:id="@+id/draw"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@mipmap/drawer"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:text="推荐课程"
+            android:textColor="#FF66CAE2"
+            android:layout_weight="15"
+            android:gravity="center"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/search"
+            android:layout_alignParentRight="true"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@mipmap/search"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+</android.support.v7.widget.Toolbar>

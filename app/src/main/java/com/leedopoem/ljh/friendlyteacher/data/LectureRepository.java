@@ -73,7 +73,6 @@ public class LectureRepository implements ILocalDataSource,IRemoteDataSource {
     public Observable<List<Lecture>> getAllLectures() {
         if (netAvailable){
             Observable<List<Lecture>> lectures=mRemoteDataSource.getAllLectures();
-            mLocalDataSource.save(lectures.blockingSingle());
             return lectures;
         }
         return mLocalDataSource.getAllLectures();

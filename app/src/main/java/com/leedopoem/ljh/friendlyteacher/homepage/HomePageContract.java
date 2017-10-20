@@ -19,9 +19,7 @@ public class HomePageContract {
 
     interface Presenter extends BasePresenter{
         void loadRecommendLecture();
-        void loadLectureByType(LectureType lectureType);
-        void publishLecture(Lecture lecture);
-        void communicateModule();
-        void userInformationCenter();
+        void addNewLecture();
+        void openLectureDetails();
     }
 }
