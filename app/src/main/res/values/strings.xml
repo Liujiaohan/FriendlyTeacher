@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">FriendlyTeacher</string>
+    <string name="class_time">开课时间</string>
+    <string name="class_place">开课地点</string>
+    <string name="class_type">课程类型</string>
+    <string name="each_class_time">课程时间</string>
+    <string name="teach_person">授课人</string>
+    <string name="class_name">课程名称</string>
+    <string name="publish_activity_title">发布课程</string>
+    <string name="class_introduction">课程简介</string>
 </resources>

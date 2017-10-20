@@ -1,7 +1,11 @@
 package com.leedopoem.ljh.friendlyteacher.homepage;
 
+import android.content.Intent;
+
+import com.leedopoem.ljh.friendlyteacher.base.MyApplication;
 import com.leedopoem.ljh.friendlyteacher.data.LectureRepository;
 import com.leedopoem.ljh.friendlyteacher.data.entity.Lecture;
+import com.leedopoem.ljh.friendlyteacher.newlecture.PublishNewLectureActivity;
 
 import java.util.List;
 
@@ -56,7 +60,8 @@ public class HomePagePresenter implements HomePageContract.Presenter {
 
     @Override
     public void addNewLecture() {
-
+        Intent intent = new Intent(MyApplication.getContext(), PublishNewLectureActivity.class);
+        MyApplication.getContext().startActivity(intent);
     }
 
     @Override
