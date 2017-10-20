@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4fdff"
+    android:orientation="vertical"
+    tools:context="enbledu.youkexml.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="11dp"
+        android:orientation="horizontal">
+        <Button
+            android:background="@mipmap/back"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="13dp"
+            android:layout_width="12dp"
+            android:layout_height="24dp" />
+        <TextView
+            android:text="发布课程"
+            android:layout_marginLeft="112dp"
+            android:textSize="20dp"
+            android:layout_marginRight="97dp"
+            android:textColor="@color/textBlue"
+            android:layout_marginTop="11dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:background="@mipmap/finish"
+            android:layout_marginLeft="12dp"
+            android:layout_width="24dp"
+            android:layout_height="17dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="15dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            >
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="20dp"
+                android:textSize="18dp"
+                android:text="课程名称"
+                android:textColor="#FF212121"
+                android:layout_width="100dp"
+                android:layout_height="24dp" />
+
+            <EditText
+                android:hint="123"
+                android:textColorHint="#ffffff"
+                android:textSize="18dp"
+                android:paddingTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="7dp"
+            >
+            <TextView
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="20dp"
+                android:textSize="14dp"
+                android:text="授课人"
+                android:textColor="@color/textMain"
+                android:layout_width="100dp"
+                android:layout_height="24dp" />
+
+            <EditText
+                android:hint="123"
+                android:textColor="@color/textMain"
+                android:textSize="14dp"
+                android:paddingTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="7dp"
+            >
+            <TextView
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="20dp"
+                android:textSize="14dp"
+                android:text="开课时间"
+                android:textColor="@color/textMain"
+                android:layout_width="100dp"
+                android:layout_height="24dp" />
+
+            <EditText
+                android:hint="123"
+                android:textColor="@color/textMain"
+                android:textSize="14dp"
+                android:paddingTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="7dp"
+            >
+            <TextView
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="20dp"
+                android:textSize="14dp"
+                android:text="开课地点"
+                android:textColor="@color/textMain"
+                android:layout_width="100dp"
+                android:layout_height="24dp" />
+
+            <EditText
+                android:hint="123"
+                android:textColor="@color/textMain"
+                android:textSize="14dp"
+                android:paddingTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="7dp"
+            >
+            <TextView
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="20dp"
+                android:textSize="14dp"
+                android:text="开课时间"
+                android:textColor="@color/textMain"
+                android:layout_width="100dp"
+                android:layout_height="24dp" />
+
+            <EditText
+                android:hint="123"
+                android:textColor="@color/textMain"
+                android:textSize="14dp"
+                android:paddingTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="7dp"
+            >
+            <TextView
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="20dp"
+                android:textSize="14dp"
+                android:text="开课地点"
+                android:textColor="@color/textMain"
+                android:layout_width="100dp"
+                android:layout_height="24dp" />
+
+            <EditText
+                android:hint="123"
+                android:textColor="@color/textMain"
+                android:textSize="14dp"
+                android:paddingTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
