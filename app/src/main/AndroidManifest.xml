@@ -23,7 +23,8 @@
         </activity>
         <activity android:name=".base.BaseActivity" />
         <activity android:name=".newlecture.PublishNewLectureActivity" />
-        <activity android:name=".newmessage.NewMessageActivity"></activity>
+        <activity android:name=".newmessage.NewMessageActivity" />
+        <activity android:name=".lecturedetail.LectureDetailActivity"></activity>
     </application>
 
 </manifest>
