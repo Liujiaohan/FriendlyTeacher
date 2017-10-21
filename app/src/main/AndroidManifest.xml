@@ -22,7 +22,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".base.BaseActivity" />
-        <activity android:name=".newlecture.PublishNewLectureActivity"></activity>
+        <activity android:name=".newlecture.PublishNewLectureActivity" />
+        <activity android:name=".newmessage.NewMessageActivity"></activity>
     </application>
 
 </manifest>
