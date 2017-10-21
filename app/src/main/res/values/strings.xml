@@ -10,4 +10,6 @@
     <string name="class_introduction">课程简介</string>
     <string name="follow">关注</string>
     <string name="fensi">粉丝</string>
+    <string name="publishMessage">发布留言</string>
+    <string name="message">留言信息</string>
 </resources>

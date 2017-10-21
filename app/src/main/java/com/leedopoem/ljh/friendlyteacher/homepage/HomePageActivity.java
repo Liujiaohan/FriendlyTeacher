@@ -27,7 +27,7 @@ public class HomePageActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_personal_homepage);
+        setContentView(R.layout.activity_new_message);
         /*toolbar= (Toolbar) findViewById(R.id.toolbar);
         drawerLayout= (DrawerLayout) findViewById(R.id.drawer_layout);
         bottomNavigationView= (BottomNavigationView) findViewById(R.id.bottom_navigation_view);
