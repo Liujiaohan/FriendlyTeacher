@@ -1,7 +1,5 @@
 package com.leedopoem.ljh.friendlyteacher.newlecture;
 
-import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -29,14 +27,6 @@ public class PublishNewLectureActivity extends BaseActivity implements NewLectur
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_publish_new_lecture);
-        //沉浸式状态栏
-        if (Build.VERSION.SDK_INT >= 21) {
-            View decorView = getWindow().getDecorView();
-            int option = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                    | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
-            decorView.setSystemUiVisibility(option);
-            getWindow().setStatusBarColor(Color.TRANSPARENT);
-        }
         mLectureRepository = new LectureRepository(this);
         mPresenter = new NewLecturePresentImpl(this, mLectureRepository);
         init();
@@ -59,6 +49,7 @@ public class PublishNewLectureActivity extends BaseActivity implements NewLectur
 
     @Override
     public void setPresenter(NewLectureContract.Presenter presenter) {
+        //因为是activity,所以不需要这个
         mPresenter = presenter;
     }
 

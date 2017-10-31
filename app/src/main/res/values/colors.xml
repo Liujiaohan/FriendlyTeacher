@@ -9,4 +9,6 @@
     <color name="text_grey">#999999</color>
     <color name="backgroundMain">#f4fdff</color>
     <color name="white_bg">#F5FAFB</color>
+    <color name="login_hint">#FFBDBDBD</color>
+    <color name="login_text">#FF66CAE2</color>
 </resources>

@@ -1,0 +1,13 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!--按钮样式-->
+
+    <corners
+        android:radius="56dp"
+        />
+    <!-- 渐变 -->
+    <solid
+        android:color="#66CAE2"
+        />
+
+</shape>
