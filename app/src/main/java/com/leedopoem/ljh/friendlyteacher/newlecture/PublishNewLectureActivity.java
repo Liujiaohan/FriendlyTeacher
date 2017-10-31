@@ -2,17 +2,17 @@ package com.leedopoem.ljh.friendlyteacher.newlecture;
 
 import android.graphics.Color;
 import android.os.Build;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 import com.leedopoem.ljh.friendlyteacher.R;
+import com.leedopoem.ljh.friendlyteacher.base.BaseActivity;
 import com.leedopoem.ljh.friendlyteacher.data.LectureRepository;
 import com.leedopoem.ljh.friendlyteacher.data.entity.Lecture;
 
-public class PublishNewLectureActivity extends AppCompatActivity implements NewLectureContract.View, View.OnClickListener{
+public class PublishNewLectureActivity extends BaseActivity implements NewLectureContract.View, View.OnClickListener{
 
     LectureRepository mLectureRepository;
     private NewLectureContract.Presenter mPresenter;
