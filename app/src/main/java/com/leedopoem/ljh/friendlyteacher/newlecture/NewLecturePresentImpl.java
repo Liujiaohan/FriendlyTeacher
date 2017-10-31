@@ -1,6 +1,9 @@
 package com.leedopoem.ljh.friendlyteacher.newlecture;
 
+import com.leedopoem.ljh.friendlyteacher.data.LectureRepository;
 import com.leedopoem.ljh.friendlyteacher.data.entity.Lecture;
+
+import io.reactivex.disposables.CompositeDisposable;
 
 /**
  * Created by Administrator on 2017/10/21 0021.
@@ -8,12 +11,19 @@ import com.leedopoem.ljh.friendlyteacher.data.entity.Lecture;
 
 public class NewLecturePresentImpl implements NewLectureContract.Presenter {
 
+    private LectureRepository mRepository;
+
     private NewLectureContract.View mView;
 
-    public NewLecturePresentImpl(NewLectureContract.View view) {
+    private CompositeDisposable mCompositeDisposable;
+
+    public NewLecturePresentImpl(NewLectureContract.View view, LectureRepository mRepository) {
         mView = view;
         mView.setPresenter(this);
+        this.mRepository = mRepository;
+        mCompositeDisposable = new CompositeDisposable();
     }
+
     @Override
     public void subscribe() {
 
@@ -21,7 +31,7 @@ public class NewLecturePresentImpl implements NewLectureContract.Presenter {
 
     @Override
     public void unSubscribe() {
-
+        mCompositeDisposable.clear();
     }
 
     @Override

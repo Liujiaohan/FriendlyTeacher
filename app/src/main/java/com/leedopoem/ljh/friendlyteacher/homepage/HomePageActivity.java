@@ -11,6 +11,7 @@ import android.view.View;
 
 import com.leedopoem.ljh.friendlyteacher.R;
 import com.leedopoem.ljh.friendlyteacher.data.LectureRepository;
+import com.leedopoem.ljh.friendlyteacher.utils.ActivityUtils;
 
 /**
  * Created by ljh on 17-10-19.
@@ -27,8 +28,8 @@ public class HomePageActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lecture_detail);
-        /*toolbar= (Toolbar) findViewById(R.id.toolbar);
+        setContentView(R.layout.activity_homepage);
+        toolbar= (Toolbar) findViewById(R.id.toolbar);
         drawerLayout= (DrawerLayout) findViewById(R.id.drawer_layout);
         bottomNavigationView= (BottomNavigationView) findViewById(R.id.bottom_navigation_view);
         setSupportActionBar(toolbar);
@@ -37,7 +38,7 @@ public class HomePageActivity extends AppCompatActivity {
         ActivityUtils.addFragmentToActivity(getSupportFragmentManager(),mFragment,R.id.homepage_fragment_container);
 
         mRepository=new LectureRepository(this);
-        mPresenter=new HomePagePresenter(mRepository,mFragment);*/
+        mPresenter=new HomePagePresenter(mRepository,mFragment);
         //沉浸式状态栏
         if (Build.VERSION.SDK_INT >= 21) {
             View decorView = getWindow().getDecorView();

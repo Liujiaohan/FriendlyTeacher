@@ -9,10 +9,12 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.leedopoem.ljh.friendlyteacher.R;
+import com.leedopoem.ljh.friendlyteacher.data.LectureRepository;
 import com.leedopoem.ljh.friendlyteacher.data.entity.Lecture;
 
 public class PublishNewLectureActivity extends AppCompatActivity implements NewLectureContract.View, View.OnClickListener{
 
+    LectureRepository mLectureRepository;
     private NewLectureContract.Presenter mPresenter;
     private Button backBtn;
     private Button finishBtn;
@@ -35,7 +37,8 @@ public class PublishNewLectureActivity extends AppCompatActivity implements NewL
             decorView.setSystemUiVisibility(option);
             getWindow().setStatusBarColor(Color.TRANSPARENT);
         }
-        mPresenter = new NewLecturePresentImpl(this);
+        mLectureRepository = new LectureRepository(this);
+        mPresenter = new NewLecturePresentImpl(this, mLectureRepository);
         init();
     }
 
