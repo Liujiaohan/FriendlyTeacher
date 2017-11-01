@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundMain"
+    tools:context="com.leedopoem.ljh.friendlyteacher.newmessage.NewMessageActivity">
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="11dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/message_back_btn"
+            android:background="@mipmap/back"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="13dp"
+            android:layout_width="12dp"
+            android:layout_height="24dp" />
+        <TextView
+            android:text="@string/publishMessage"
+            android:layout_marginLeft="112dp"
+            android:textSize="20dp"
+            android:layout_marginRight="97dp"
+            android:textColor="@color/textBlue"
+            android:layout_marginTop="11dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/message_finish_btn"
+            android:background="@mipmap/complete"
+            android:layout_marginLeft="12dp"
+            android:layout_width="24dp"
+            android:layout_height="17dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="15dp"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/message_edt"
+        android:background="@color/white"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="6dp"
+        android:paddingRight="16dp"
+        android:minLines="5"
+        android:gravity="top"
+        android:hint="@string/message"
+        android:layout_width="match_parent"
+        android:layout_height="350dp" />
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!--按钮样式-->
+
+    <!-- 渐变 -->
+    <gradient
+        android:startColor="#9ED8F1"
+        android:endColor="#9ED8F1" />
+
+</shape>

@@ -1,4 +1,4 @@
-package com.leedopoem.ljh.friendlyteacher.homepage;
+package com.leedopoem.ljh.friendlyteacher;
 
 import android.os.Bundle;
 
