@@ -11,5 +11,6 @@
     <color name="white_bg">#F5FAFB</color>
     <color name="login_hint">#FFBDBDBD</color>
     <color name="login_text">#FF66CAE2</color>
+    <color name="blue_bg">#f4fdff</color>
 
 </resources>

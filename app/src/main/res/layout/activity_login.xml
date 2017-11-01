@@ -61,14 +61,13 @@
         android:id="@+id/textView3"
         android:layout_width="368dp"
         android:layout_height="24dp"
-        android:text="TextView"
-        android:background="#9ED8F1"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="0dp"
         android:layout_marginLeft="0dp"
-        app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginRight="0dp"
-        app:layout_constraintRight_toRightOf="parent" />
+        android:layout_marginTop="0dp"
+        android:background="#9ED8F1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView4"
