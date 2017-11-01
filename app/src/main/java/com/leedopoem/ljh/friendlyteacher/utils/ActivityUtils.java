@@ -16,4 +16,12 @@ public class ActivityUtils {
         fragmentTransaction.add(fragmentId,fragment);
         fragmentTransaction.commit();
     }
+
+    public static void replaceFragment(FragmentManager fragmentManager,Fragment fragment,int fragmentId){
+        if ((fragmentManager==null)||(fragment==null)) throw new RuntimeException();
+        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+        fragmentTransaction.replace(fragmentId,fragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+    }
 }

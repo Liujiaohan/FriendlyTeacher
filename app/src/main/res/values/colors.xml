@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#FFf4fdff</color>
+    <color name="colorPrimaryDark">#FFF5FAFF</color>
+    <color name="colorAccent">#FFFFCCCC</color>
     <color name="white">#ffffff</color>
     <color name="textBlue">#FF5AC0D8</color>
     <color name="textMain">#FF000000</color>
@@ -11,4 +11,5 @@
     <color name="white_bg">#F5FAFB</color>
     <color name="login_hint">#FFBDBDBD</color>
     <color name="login_text">#FF66CAE2</color>
+
 </resources>

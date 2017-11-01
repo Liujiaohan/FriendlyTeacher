@@ -4,16 +4,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.leedopoem.ljh.friendlyteacher.R;
 import com.leedopoem.ljh.friendlyteacher.base.BaseActivity;
 import com.leedopoem.ljh.friendlyteacher.data.LectureRepository;
 import com.leedopoem.ljh.friendlyteacher.data.entity.Lecture;
 
-public class PublishNewLectureActivity extends BaseActivity implements NewLectureContract.View, View.OnClickListener{
 
-    LectureRepository mLectureRepository;
+public class PublishNewLectureActivity extends BaseActivity implements
+        NewLectureContract.View, View.OnClickListener{
+
     private NewLectureContract.Presenter mPresenter;
+    private LectureRepository mRepository;
     private Button backBtn;
     private Button finishBtn;
     private EditText classNameEdt;
@@ -27,8 +30,10 @@ public class PublishNewLectureActivity extends BaseActivity implements NewLectur
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_publish_new_lecture);
-        mLectureRepository = new LectureRepository(this);
-        mPresenter = new NewLecturePresentImpl(this, mLectureRepository);
+
+
+        mRepository=new LectureRepository(this);
+        mPresenter = new NewLecturePresentImpl(this, mRepository);
         init();
     }
 
@@ -49,7 +54,9 @@ public class PublishNewLectureActivity extends BaseActivity implements NewLectur
 
     @Override
     public void setPresenter(NewLectureContract.Presenter presenter) {
+
         //因为是activity,所以不需要这个
+
         mPresenter = presenter;
     }
 
@@ -89,6 +96,8 @@ public class PublishNewLectureActivity extends BaseActivity implements NewLectur
             }
             case R.id.newlecture_finish_btn: {
                 mPresenter.publishLecture();
+                Toast.makeText(this,"发布成功",Toast.LENGTH_SHORT).show();
+                finish();
                 break;
             }
         }

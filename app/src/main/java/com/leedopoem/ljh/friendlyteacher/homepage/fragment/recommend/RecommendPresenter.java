@@ -1,11 +1,17 @@
-package com.leedopoem.ljh.friendlyteacher.homepage;
+package com.leedopoem.ljh.friendlyteacher.homepage.fragment.recommend;
 
+import android.content.Context;
 import android.content.Intent;
 
 import com.leedopoem.ljh.friendlyteacher.base.MyApplication;
 import com.leedopoem.ljh.friendlyteacher.data.LectureRepository;
 import com.leedopoem.ljh.friendlyteacher.data.entity.Lecture;
 import com.leedopoem.ljh.friendlyteacher.newlecture.PublishNewLectureActivity;
+import com.leedopoem.ljh.friendlyteacher.homepage.HomePageActivity;
+import com.leedopoem.ljh.friendlyteacher.newlecture.NewLectureContract;
+import com.leedopoem.ljh.friendlyteacher.newlecture.PublishNewLectureActivity;
+import com.leedopoem.ljh.friendlyteacher.newmessage.NewMessageActivity;
+
 
 import java.util.List;
 
@@ -18,15 +24,18 @@ import io.reactivex.functions.Consumer;
  * Created by ljh on 17-10-3.
  */
 
-public class HomePagePresenter implements HomePageContract.Presenter {
+public class RecommendPresenter implements RecommendContract.Presenter {
 
     private LectureRepository mRepository;
 
-    private HomePageContract.View mHomepageView;
+    private RecommendContract.View mHomepageView;
 
     private CompositeDisposable mCompositeDisposable;
 
-    public HomePagePresenter(LectureRepository repository, HomePageContract.View homepageView) {
+    private Context context;
+
+    public RecommendPresenter(Context context,LectureRepository repository, RecommendContract.View homepageView) {
+        this.context=context;
         this.mRepository = repository;
         this.mHomepageView = homepageView;
         mHomepageView.setPresenter(this);

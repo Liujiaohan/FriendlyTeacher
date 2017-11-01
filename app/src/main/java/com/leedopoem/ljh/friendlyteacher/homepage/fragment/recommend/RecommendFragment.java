@@ -1,9 +1,10 @@
-package com.leedopoem.ljh.friendlyteacher.homepage;
+package com.leedopoem.ljh.friendlyteacher.homepage.fragment.recommend;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -23,38 +24,50 @@ import java.util.List;
  * Created by ljh on 17-10-3.
  */
 
-public class HomePageFragment extends Fragment implements HomePageContract.View  {
+public class RecommendFragment extends Fragment implements RecommendContract.View  {
     private static final String FRAGMENT_ID="FRAGMENT_ID";
-    private HomePageContract.Presenter mPresenter;
+
+    private RecommendContract.Presenter mPresenter;
     private RecyclerView mLectureRecyclerList;
     private FloatingActionButton mFab;
     private RecommendLecturesAdapter mAdapter;
+    private SwipeRefreshLayout swipeRefreshLayout;
+    private boolean isRefresh=false;
 
-    public static HomePageFragment newInstance(String fragmentId){
+    public static RecommendFragment newInstance(String fragmentId){
         Bundle argument=new Bundle();
         argument.putString(FRAGMENT_ID,fragmentId);
-        HomePageFragment fragment=new HomePageFragment();
+        RecommendFragment fragment=new RecommendFragment();
         fragment.setArguments(argument);
         return fragment;
     }
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
         //获得初始化控件
-        View root =inflater.inflate(R.layout.fragment_homepage,container);
+        View root =inflater.inflate(R.layout.fragment_homepage,container,false);
         mLectureRecyclerList=root.findViewById(R.id.recommend_lectures_list);
+        swipeRefreshLayout=root.findViewById(R.id.swipeRefresh_recommend);
         mFab=root.findViewById(R.id.fab_homePage);
-        mAdapter=new RecommendLecturesAdapter(new ArrayList<Lecture>(), new RecommendLecturesAdapter.OnItemClickListener() {
-            @Override
-            public void onLectureClick() {
-                mPresenter.openLectureDetails();
-            }
 
-            @Override
-            public void onStared() {
-            }
-        });
+        return root;
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        mAdapter=new RecommendLecturesAdapter(new ArrayList<Lecture>(),
+                new RecommendLecturesAdapter.OnItemClickListener() {
+                    @Override
+                    public void onLectureClick() {
+                        mPresenter.openLectureDetails();
+                    }
+
+                    @Override
+                    public void onStared() {
+                    }
+                });
 
         //fab跳转到新界面
         mFab.setOnClickListener(new View.OnClickListener() {
@@ -68,7 +81,17 @@ public class HomePageFragment extends Fragment implements HomePageContract.View 
         mLectureRecyclerList.setLayoutManager(new LinearLayoutManager(MyApplication.INSTANCE));
         mLectureRecyclerList.setAdapter(mAdapter);
 
-        return super.onCreateView(inflater, container, savedInstanceState);
+        //下拉刷新
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                if (!isRefresh){
+                    mPresenter.loadRecommendLecture();
+                }
+            }
+        });
+
+        super.onActivityCreated(savedInstanceState);
     }
 
     @Override
@@ -77,7 +100,7 @@ public class HomePageFragment extends Fragment implements HomePageContract.View 
     }
 
     @Override
-    public void setPresenter(HomePageContract.Presenter presenter) {
+    public void setPresenter(RecommendContract.Presenter presenter) {
         mPresenter=presenter;
     }
 
@@ -87,6 +110,8 @@ public class HomePageFragment extends Fragment implements HomePageContract.View 
 
     @Override
     public void showLectures(List<Lecture> lectures) {
+        isRefresh=false;
+        swipeRefreshLayout.setRefreshing(false);
         mAdapter.replaceData(lectures);
         Log.i("TAG", "showLectures: "+lectures.toString());
     }
