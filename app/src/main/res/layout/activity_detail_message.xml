@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.leedopoem.ljh.friendlyteacher.personaldetailmessage.DetailMessageActivity">
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="11dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/detail_message_back_btn"
+            android:background="@mipmap/back"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="13dp"
+            android:layout_width="12dp"
+            android:layout_height="24dp" />
+        <TextView
+            android:text="@string/detail_message_title"
+            android:layout_marginLeft="112dp"
+            android:textSize="20dp"
+            android:layout_marginRight="97dp"
+            android:textColor="@color/textBlue"
+            android:layout_marginTop="11dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="68dp">
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="18dp"
+            android:text="头 像 :"
+            android:textSize="14dp"
+            android:layout_width="60dp"
+            android:layout_height="19dp" />
+        <ImageView
+            android:background="@mipmap/touxiang"
+            android:layout_marginLeft="208dp"
+            android:layout_width="58dp"
+            android:layout_height="58dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="32dp">
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="18dp"
+            android:text="头 像 :"
+            android:textSize="14dp"
+            android:layout_width="60dp"
+            android:layout_height="19dp" />
+        <ImageView
+            android:background="@mipmap/touxiang"
+            android:layout_marginLeft="208dp"
+            android:layout_width="58dp"
+            android:layout_height="58dp" />
+</LinearLayout>
+    </LinearLayout>

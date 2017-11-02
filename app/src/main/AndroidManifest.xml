@@ -25,7 +25,8 @@
         <activity android:name=".newlecture.PublishNewLectureActivity" />
         <activity android:name=".newmessage.NewMessageActivity" />
         <activity android:name=".lecturedetail.LectureDetailActivity" />
-        <activity android:name=".homepage.HomePageActivity"></activity>
+        <activity android:name=".homepage.HomePageActivity" />
+        <activity android:name=".personaldetailmessage.DetailMessageActivity"></activity>
     </application>
 
 </manifest>
