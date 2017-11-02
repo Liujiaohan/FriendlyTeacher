@@ -3,6 +3,7 @@ package com.leedopoem.ljh.friendlyteacher.homepage.fragment.personal;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
@@ -45,6 +46,16 @@ public class PersonalFragment extends Fragment implements PersonalConstract.View
     private CardView AboutusBtn;
     private Context context;
 
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        SettingBtn.setOnClickListener(this);
+        PublishedLectureBtn.setOnClickListener(this);
+        StudingLectureBtn.setOnClickListener(this);
+        CollectedLectureBtn.setOnClickListener(this);
+        AboutusBtn.setOnClickListener(this);
+    }
+
     public PersonalFragment() {
         // Required empty public constructor
     }
@@ -85,23 +96,18 @@ public class PersonalFragment extends Fragment implements PersonalConstract.View
         PublishedLectureNumText = view.findViewById(R.id.personal_publishlecturenum);
         StudingLectureNumText = view.findViewById(R.id.personal_studylecturenum);
         CollectedLectureNumText = view.findViewById(R.id.personal_collectedlecturenum);
-
         SettingBtn = view.findViewById(R.id.personal_setting_btn);
-        SettingBtn.setOnClickListener(this);
         PublishedLectureBtn = view.findViewById(R.id.personal_btn_mylecture);
-        PublishedLectureBtn.setOnClickListener(this);
         StudingLectureBtn = view.findViewById(R.id.personal_btn_mystudyinglecture);
-        StudingLectureBtn.setOnClickListener(this);
         CollectedLectureBtn = view.findViewById(R.id.personal_btn_collect);
-        CollectedLectureBtn.setOnClickListener(this);
         AboutusBtn = view.findViewById(R.id.personal_btn_aboutus);
-        AboutusBtn.setOnClickListener(this);
-        return inflater.inflate(R.layout.fragment_personal, container, false);
+        return view;
     }
 
     @Override
     public void setPresenter(PersonalConstract.Presenter presenter) {
         this.personalPresenter = presenter;
+
     }
 
     @Override
@@ -119,12 +125,14 @@ public class PersonalFragment extends Fragment implements PersonalConstract.View
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.personal_setting_btn: {
+                /*Log.i(TAG,"setting")*/;
                 Intent intent = new Intent(context, DetailMessageActivity.class);
                 context.startActivity(intent);
+                /*Log.i(TAG,"setting");*/
                 break;
             }
             case R.id.personal_btn_mylecture:{
-
+                /*Log.i(TAG,"lecture")*/;
                 break;
             }
             case R.id.personal_btn_mystudyinglecture: {
