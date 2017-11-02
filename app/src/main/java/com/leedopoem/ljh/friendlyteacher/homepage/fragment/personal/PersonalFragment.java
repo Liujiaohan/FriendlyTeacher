@@ -5,8 +5,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.leedopoem.ljh.friendlyteacher.R;
+import com.leedopoem.ljh.friendlyteacher.data.entity.PersonalInfo;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,11 +18,20 @@ import com.leedopoem.ljh.friendlyteacher.R;
  * create an instance of this fragment.
  */
 
-public class PersonalFragment extends Fragment {
+public class PersonalFragment extends Fragment implements PersonalConstract.View {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
+    private PersonalConstract.Presenter personalPresenter;
+    TextView UserNameText;
+    TextView IntroductionText;
+    TextView NoticedNumText;
+    TextView FansNumText;
+    TextView PublishedLectureNumText;
+    TextView StudingLectureNumText;
+    TextView CollectedLectureNumText;
 
     public PersonalFragment() {
         // Required empty public constructor
@@ -53,7 +64,30 @@ public class PersonalFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_personal, container, false);
+        UserNameText = view.findViewById(R.id.personal_username);
+        IntroductionText = view.findViewById(R.id.personal_introduction);
+        NoticedNumText = view.findViewById(R.id.personal_noticed);
+        FansNumText = view.findViewById(R.id.personal_fansnum);
+        PublishedLectureNumText = view.findViewById(R.id.personal_publishlecturenum);
+        StudingLectureNumText = view.findViewById(R.id.personal_studylecturenum);
+        CollectedLectureNumText = view.findViewById(R.id.personal_collectedlecturenum);
         return inflater.inflate(R.layout.fragment_personal, container, false);
     }
 
+    @Override
+    public void setPresenter(PersonalConstract.Presenter presenter) {
+        this.personalPresenter = presenter;
+    }
+
+    @Override
+    public void showPersonalInfo(PersonalInfo info) {
+        UserNameText.setText(info.getUserName());
+        IntroductionText.setText(info.getIntroduction());
+        NoticedNumText.setText(info.getNoticedNum());
+        FansNumText.setText(info.getFansNum());
+        PublishedLectureNumText.setText(info.getPublishedLectureNum());
+        StudingLectureNumText.setText(info.getStudingLectureNum());
+        CollectedLectureNumText.setText(info.getCollectedLectureNum());
+    }
 }
