@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
+    android:background="@color/blue_bg"
     android:layout_height="match_parent"
     tools:context="com.leedopoem.ljh.friendlyteacher.personaldetailmessage.DetailMessageActivity">
 
@@ -33,6 +34,8 @@
     </LinearLayout>
 
     <LinearLayout
+        android:background="@color/white"
+
         android:layout_marginTop="10dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -51,22 +54,133 @@
             android:layout_width="58dp"
             android:layout_height="58dp" />
     </LinearLayout>
+
     <LinearLayout
+        android:background="@color/white"
         android:orientation="horizontal"
         android:layout_width="match_parent"
+        android:gravity="center_vertical"
         android:layout_height="32dp">
 
         <TextView
-            android:layout_gravity="center_vertical"
             android:layout_marginLeft="18dp"
-            android:text="头 像 :"
+            android:text="昵  称  :"
             android:textSize="14dp"
+            android:textColor="@color/text_grey"
             android:layout_width="60dp"
             android:layout_height="19dp" />
-        <ImageView
-            android:background="@mipmap/touxiang"
-            android:layout_marginLeft="208dp"
-            android:layout_width="58dp"
-            android:layout_height="58dp" />
-</LinearLayout>
+        <TextView
+            android:text="JessyaHE"
+            android:textColor="@color/text_black"
+            android:layout_marginLeft="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="19dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="32dp">
+
+        <TextView
+            android:layout_marginLeft="18dp"
+            android:text="学  校  :"
+            android:textSize="14dp"
+            android:textColor="@color/text_grey"
+            android:layout_width="60dp"
+            android:layout_height="19dp" />
+        <TextView
+            android:text="华中科技大学"
+            android:textColor="@color/text_black"
+            android:layout_marginLeft="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="19dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="32dp">
+
+        <TextView
+            android:layout_marginLeft="18dp"
+            android:text="专  业  :"
+            android:textSize="14dp"
+            android:textColor="@color/text_grey"
+            android:layout_width="60dp"
+            android:layout_height="19dp" />
+        <TextView
+            android:text="产品设计"
+            android:textColor="@color/text_black"
+            android:layout_marginLeft="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="19dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="32dp">
+
+        <TextView
+            android:layout_marginLeft="18dp"
+            android:text="年  级  :"
+            android:textSize="14dp"
+            android:textColor="@color/text_grey"
+            android:layout_width="60dp"
+            android:layout_height="19dp" />
+        <TextView
+            android:text="2015届"
+            android:textColor="@color/text_black"
+            android:layout_marginLeft="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="19dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="32dp">
+
+        <TextView
+            android:layout_marginLeft="18dp"
+            android:text="个人介绍:"
+            android:textSize="14dp"
+            android:textColor="@color/text_grey"
+            android:layout_width="60dp"
+            android:layout_height="19dp" />
+        <TextView
+            android:text="物管好看"
+            android:textColor="@color/text_black"
+            android:layout_marginLeft="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="19dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:paddingTop="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_marginLeft="18dp"
+            android:text="个性签名:"
+            android:textSize="14dp"
+            android:textColor="@color/text_grey"
+            android:layout_width="60dp"
+            android:layout_height="19dp" />
+        <TextView
+            android:text="我爱学习"
+            android:textColor="@color/text_black"
+            android:layout_marginLeft="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="19dp" />
+    </LinearLayout>
     </LinearLayout>
