@@ -28,10 +28,9 @@
             android:layout_marginLeft="112dp"
             android:layout_marginRight="97dp"
             android:layout_marginTop="11dp"
-            android:text="@string/detail_message_title"
             android:textColor="@color/textBlue"
             android:textSize="20dp"
-            tools:text="注册        " />
+            tools:text="    注册    " />
 
         <Button
             android:id="@+id/zhuce_btn_ok"

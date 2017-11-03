@@ -26,9 +26,9 @@
         <activity android:name=".newmessage.NewMessageActivity" />
         <activity android:name=".page.lecturedetail.LectureDetailActivity" />
         <activity android:name=".newmessage.homepage.HomePageActivity" />
-        <activity android:name=".personaldetailmessage.DetailMessageActivity" />
         <activity android:name=".page.personalsetting.PersonalMessageSettingActivity" />
-        <activity android:name=".page.zhuce.ZhuceActivity"></activity>
+        <activity android:name=".page.zhuce.ZhuceActivity" />
+        <activity android:name=".page.findpassword.FindPasswordActivity"></activity>
     </application>
 
 </manifest>

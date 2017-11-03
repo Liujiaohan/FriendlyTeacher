@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.leedopoem.ljh.friendlyteacher.R;
+import com.leedopoem.ljh.friendlyteacher.data.entity.PersonalInfo;
 
 public class ZhuceActivity extends AppCompatActivity {
     private Button backBtn;
@@ -34,7 +35,17 @@ public class ZhuceActivity extends AppCompatActivity {
         okBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                PersonalInfo info = new PersonalInfo(
+                        uidEdt.getText().toString(),
+                        usernameEdt.getText().toString(),
+                        emailEdt.getText().toString(),
+                        passwordEdt.getText().toString(),
+                        professionEdt.getText().toString(),
+                        gradeEdt.getText().toString(),
+                        signatureEdt.getText().toString(),
+                        intruductionEdt.getText().toString()
+                );
+                //// TODO: 2017/11/3 0003 注册 
             }
         });
     }
