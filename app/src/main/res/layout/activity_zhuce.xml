@@ -8,18 +8,19 @@
     >
 
     <LinearLayout
-        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginBottom="11dp"
+        android:background="@color/white"
         android:orientation="horizontal">
+
         <Button
-            android:id="@+id/detail_message_back_btn"
-            android:background="@mipmap/back"
-            android:layout_marginTop="13dp"
-            android:layout_marginLeft="13dp"
+            android:id="@+id/zhuce_btn_back"
             android:layout_width="12dp"
-            android:layout_height="24dp" />
+            android:layout_height="24dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="13dp"
+            android:background="@mipmap/back" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -31,14 +32,15 @@
             android:textColor="@color/textBlue"
             android:textSize="20dp"
             tools:text="注册        " />
+
         <Button
-            android:id="@+id/detail_message_finish_btn"
-            android:background="@mipmap/finish"
-            android:layout_marginLeft="12dp"
+            android:id="@+id/zhuce_btn_ok"
             android:layout_width="24dp"
             android:layout_height="17dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="15dp"
             android:layout_marginTop="16dp"
-            android:layout_marginRight="15dp"/>
+            android:background="@mipmap/finish" />
     </LinearLayout>
 
     <LinearLayout
@@ -57,7 +59,7 @@
             android:textSize="14dp" />
 
         <EditText
-            android:id="@+id/zhuce_edt_"
+            android:id="@+id/zhuce_edt_xuehao"
             android:layout_width="match_parent"
             android:layout_height="19dp"
             android:layout_marginLeft="12dp"
@@ -81,12 +83,11 @@
             android:textSize="14dp" />
 
         <EditText
-            android:id="@+id/detail_message_edt_user_school"
+            android:id="@+id/zhuce_edt_name"
             android:layout_width="match_parent"
             android:layout_height="19dp"
             android:layout_marginLeft="12dp"
             android:background="@null"
-            android:text="华中科技大学"
             android:textColor="@color/text_black"
             android:textSize="14dp" />
     </LinearLayout>
@@ -106,12 +107,11 @@
             android:textSize="14dp" />
 
         <EditText
-            android:id="@+id/detail_message_profession"
+            android:id="@+id/zhuce_edt_email"
             android:layout_width="match_parent"
             android:layout_height="19dp"
             android:layout_marginLeft="12dp"
             android:background="@null"
-            android:text="产品设计"
             android:textColor="@color/text_black"
             android:textSize="14dp" />
     </LinearLayout>
@@ -131,12 +131,11 @@
             android:textSize="14dp" />
 
         <EditText
-            android:id="@+id/detail_message_grade"
+            android:id="@+id/zhuce_edt_password"
             android:layout_width="match_parent"
             android:layout_height="19dp"
             android:layout_marginLeft="12dp"
             android:background="@null"
-            android:text="2015届"
             android:textColor="@color/text_black"
             android:textSize="14dp" />
     </LinearLayout>
@@ -151,17 +150,65 @@
             android:layout_width="60dp"
             android:layout_height="19dp"
             android:layout_marginLeft="18dp"
-            android:text="院系年级"
+            android:text="专    业    :"
             android:textColor="@color/text_grey"
             android:textSize="14dp" />
 
         <EditText
-            android:id="@+id/detail_message_edt_introduction"
+            android:id="@+id/zhuce_edt_profession"
             android:layout_width="match_parent"
             android:layout_height="19dp"
             android:layout_marginLeft="12dp"
             android:background="@null"
-            android:text="五官好看"
+            android:textColor="@color/text_black"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="32dp">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="19dp"
+            android:layout_marginLeft="18dp"
+            android:text="年    级    :"
+            android:textColor="@color/text_grey"
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/zhuce_edt_grade"
+            android:layout_width="match_parent"
+            android:layout_height="19dp"
+            android:layout_marginLeft="12dp"
+            android:background="@null"
+            android:textColor="@color/text_black"
+            android:textSize="14dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="32dp">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="19dp"
+            android:layout_marginLeft="18dp"
+            android:text="个性签名:"
+            android:textColor="@color/text_grey"
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/zhuce_edt_signature"
+            android:layout_width="match_parent"
+            android:layout_height="19dp"
+            android:layout_marginLeft="12dp"
+            android:background="@null"
             android:textColor="@color/text_black"
             android:textSize="14dp" />
     </LinearLayout>
@@ -178,19 +225,18 @@
             android:layout_width="60dp"
             android:layout_height="32dp"
             android:layout_marginLeft="18dp"
-            android:text="个人简介"
+            android:text="个人简介:"
             android:textColor="@color/text_grey"
             android:textSize="14dp" />
 
         <EditText
-            android:id="@+id/detail_message_signature"
+            android:id="@+id/zhuce_edt_introduction"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="18dp"
             android:background="@null"
             android:gravity="top"
             android:minLines="5"
-            android:text="我爱学习"
             android:textColor="@color/text_black"
             android:textSize="14dp" />
     </LinearLayout>

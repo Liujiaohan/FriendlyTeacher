@@ -171,15 +171,15 @@
         android:layout_height="32dp">
 
         <TextView
-            android:layout_marginLeft="18dp"
-            android:text="个人介绍:"
-            android:textSize="14dp"
-            android:textColor="@color/text_grey"
             android:layout_width="60dp"
-            android:layout_height="19dp" />
+            android:layout_height="19dp"
+            android:layout_marginLeft="18dp"
+            android:text="个性签名:"
+            android:textColor="@color/text_grey"
+            android:textSize="14dp" />
 
         <EditText
-            android:id="@+id/detail_message_edt_introduction"
+            android:id="@+id/detail_message_signature"
             android:layout_width="match_parent"
             android:layout_height="19dp"
             android:layout_marginLeft="12dp"
@@ -198,15 +198,15 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:layout_marginLeft="18dp"
-            android:text="个性签名:"
-            android:textSize="14dp"
-            android:textColor="@color/text_grey"
             android:layout_width="60dp"
-            android:layout_height="32dp" />
+            android:layout_height="32dp"
+            android:layout_marginLeft="18dp"
+            android:text="个人简介:"
+            android:textColor="@color/text_grey"
+            android:textSize="14dp" />
 
         <EditText
-            android:id="@+id/detail_message_signature"
+            android:id="@+id/detail_message_edt_introduction "
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="18dp"
