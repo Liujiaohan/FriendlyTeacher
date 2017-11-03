@@ -79,7 +79,7 @@ public class HomePageActivity extends BaseActivity implements ViewPager.OnPageCh
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.home_navigation:
-                      //  viewPage.setCurrentItem(0);
+
                         ActivityUtils.replaceFragment(getSupportFragmentManager(),
                                 mRecommendFragment,R.id.container);
                         break;

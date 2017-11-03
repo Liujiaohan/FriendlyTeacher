@@ -13,6 +13,7 @@
         <include layout="@layout/toolbar"
             android:id="@+id/toolbar" />
         <FrameLayout
+            android:layout_marginTop="13dp"
             android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -23,6 +24,8 @@
             android:id="@+id/bottom_navigation_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            app:itemIconTint="@android:color/holo_blue_light"
             android:layout_alignParentBottom="true"
             app:fabSize="normal"
             app:menu="@menu/menu_navigation"/>
