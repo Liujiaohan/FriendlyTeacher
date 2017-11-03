@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:background="@color/blue_bg"
     android:layout_height="match_parent"
-    tools:context="com.leedopoem.ljh.friendlyteacher.personaldetailmessage.DetailMessageActivity">
+    >
 
     <LinearLayout
         android:background="@color/white"
@@ -44,15 +44,18 @@
         <TextView
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="18dp"
-            android:text="头 像 :"
+            android:text="头   像   :"
             android:textSize="14dp"
+            android:textColor="@color/text_grey"
             android:layout_width="60dp"
             android:layout_height="19dp" />
+
         <ImageView
-            android:background="@mipmap/touxiang"
-            android:layout_marginLeft="208dp"
+            android:id="@+id/detail_message_img_touxiang"
             android:layout_width="58dp"
-            android:layout_height="58dp" />
+            android:layout_height="58dp"
+            android:layout_marginLeft="208dp"
+            android:background="@mipmap/touxiang" />
     </LinearLayout>
 
     <LinearLayout
@@ -64,17 +67,21 @@
 
         <TextView
             android:layout_marginLeft="18dp"
-            android:text="昵  称  :"
+            android:text="昵    称    :"
             android:textSize="14dp"
             android:textColor="@color/text_grey"
             android:layout_width="60dp"
             android:layout_height="19dp" />
-        <TextView
+
+        <EditText
+            android:id="@+id/detail_message_edt_username"
+            android:layout_width="match_parent"
+            android:layout_height="19dp"
+            android:layout_marginLeft="12dp"
+            android:background="@null"
             android:text="JessyaHE"
             android:textColor="@color/text_black"
-            android:layout_marginLeft="12dp"
-            android:layout_width="match_parent"
-            android:layout_height="19dp" />
+            android:textSize="14dp" />
     </LinearLayout>
     <LinearLayout
         android:background="@color/white"
@@ -85,17 +92,21 @@
 
         <TextView
             android:layout_marginLeft="18dp"
-            android:text="学  校  :"
+            android:text="学    校    :"
             android:textSize="14dp"
             android:textColor="@color/text_grey"
             android:layout_width="60dp"
             android:layout_height="19dp" />
-        <TextView
+
+        <EditText
+            android:id="@+id/detail_message_edt_user_school"
+            android:layout_width="match_parent"
+            android:layout_height="19dp"
+            android:layout_marginLeft="12dp"
+            android:background="@null"
             android:text="华中科技大学"
             android:textColor="@color/text_black"
-            android:layout_marginLeft="12dp"
-            android:layout_width="match_parent"
-            android:layout_height="19dp" />
+            android:textSize="14dp" />
     </LinearLayout>
     <LinearLayout
         android:background="@color/white"
@@ -106,17 +117,21 @@
 
         <TextView
             android:layout_marginLeft="18dp"
-            android:text="专  业  :"
+            android:text="专    业    :"
             android:textSize="14dp"
             android:textColor="@color/text_grey"
             android:layout_width="60dp"
             android:layout_height="19dp" />
-        <TextView
+
+        <EditText
+            android:id="@+id/detail_message_profession"
+            android:layout_width="match_parent"
+            android:layout_height="19dp"
+            android:layout_marginLeft="12dp"
+            android:background="@null"
             android:text="产品设计"
             android:textColor="@color/text_black"
-            android:layout_marginLeft="12dp"
-            android:layout_width="match_parent"
-            android:layout_height="19dp" />
+            android:textSize="14dp" />
     </LinearLayout>
     <LinearLayout
         android:background="@color/white"
@@ -127,17 +142,21 @@
 
         <TextView
             android:layout_marginLeft="18dp"
-            android:text="年  级  :"
+            android:text="年    级    :"
             android:textSize="14dp"
             android:textColor="@color/text_grey"
             android:layout_width="60dp"
             android:layout_height="19dp" />
-        <TextView
+
+        <EditText
+            android:id="@+id/detail_message_grade"
+            android:layout_width="match_parent"
+            android:layout_height="19dp"
+            android:layout_marginLeft="12dp"
+            android:background="@null"
             android:text="2015届"
             android:textColor="@color/text_black"
-            android:layout_marginLeft="12dp"
-            android:layout_width="match_parent"
-            android:layout_height="19dp" />
+            android:textSize="14dp" />
     </LinearLayout>
     <LinearLayout
         android:background="@color/white"
@@ -153,18 +172,22 @@
             android:textColor="@color/text_grey"
             android:layout_width="60dp"
             android:layout_height="19dp" />
-        <TextView
-            android:text="物管好看"
-            android:textColor="@color/text_black"
-            android:layout_marginLeft="12dp"
+
+        <EditText
+            android:id="@+id/detail_message_edt_introduction"
             android:layout_width="match_parent"
-            android:layout_height="19dp" />
+            android:layout_height="19dp"
+            android:layout_marginLeft="12dp"
+            android:background="@null"
+            android:text="五官好看"
+            android:textColor="@color/text_black"
+            android:textSize="14dp" />
     </LinearLayout>
 
     <LinearLayout
         android:background="@color/white"
         android:layout_marginTop="8dp"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:paddingTop="4dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -175,12 +198,18 @@
             android:textSize="14dp"
             android:textColor="@color/text_grey"
             android:layout_width="60dp"
-            android:layout_height="19dp" />
-        <TextView
+            android:layout_height="32dp" />
+
+        <EditText
+            android:id="@+id/detail_message_signature"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="18dp"
+            android:background="@null"
+            android:gravity="top"
+            android:minLines="5"
             android:text="我爱学习"
             android:textColor="@color/text_black"
-            android:layout_marginLeft="12dp"
-            android:layout_width="match_parent"
-            android:layout_height="19dp" />
+            android:textSize="14dp" />
     </LinearLayout>
     </LinearLayout>
