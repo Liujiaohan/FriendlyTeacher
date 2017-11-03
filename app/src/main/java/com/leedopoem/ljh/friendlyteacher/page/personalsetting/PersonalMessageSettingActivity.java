@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.leedopoem.ljh.friendlyteacher.R;
-import com.leedopoem.ljh.friendlyteacher.data.entity.PersonalSettingPageInfo;
+import com.leedopoem.ljh.friendlyteacher.data.entity.PersonalInfo;
 
 public class PersonalMessageSettingActivity extends AppCompatActivity {
 
@@ -35,7 +35,7 @@ public class PersonalMessageSettingActivity extends AppCompatActivity {
         okBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PersonalSettingPageInfo info = new PersonalSettingPageInfo(
+                PersonalInfo info = new PersonalInfo(
                         userNameEdt.getText().toString(),
                         schoolEdt.getText().toString(),
                         professionEdt.getText().toString(),
@@ -43,7 +43,7 @@ public class PersonalMessageSettingActivity extends AppCompatActivity {
                         introduction.getText().toString(),
                         signatureEdt.getText().toString()
                 );
-                // TODO: 2017/11/3 0003 提交info 
+                // TODO: 2017/11/3 0003 提交info
             }
         });
     }
