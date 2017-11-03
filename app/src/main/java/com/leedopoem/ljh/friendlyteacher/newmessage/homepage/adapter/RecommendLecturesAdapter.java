@@ -1,4 +1,4 @@
-package com.leedopoem.ljh.friendlyteacher.homepage.adapter;
+package com.leedopoem.ljh.friendlyteacher.newmessage.homepage.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.leedopoem.ljh.friendlyteacher.lecturedetail.LectureDetailActivity">
+    tools:context="com.leedopoem.ljh.friendlyteacher.page.lecturedetail.LectureDetailActivity">
     <LinearLayout
         android:background="@color/white"
         android:layout_width="match_parent"

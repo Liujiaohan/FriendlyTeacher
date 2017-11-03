@@ -1,4 +1,4 @@
-package com.leedopoem.ljh.friendlyteacher.homepage.fragment.communicate;
+package com.leedopoem.ljh.friendlyteacher.newmessage.homepage.fragment.communicate;
 
 import com.leedopoem.ljh.friendlyteacher.data.LectureRepository;
 

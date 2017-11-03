@@ -1,4 +1,4 @@
-package com.leedopoem.ljh.friendlyteacher.homepage.fragment.recommend;
+package com.leedopoem.ljh.friendlyteacher.newmessage.homepage.fragment.recommend;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -15,7 +15,7 @@ import android.view.ViewGroup;
 import com.leedopoem.ljh.friendlyteacher.R;
 import com.leedopoem.ljh.friendlyteacher.base.MyApplication;
 import com.leedopoem.ljh.friendlyteacher.data.entity.Lecture;
-import com.leedopoem.ljh.friendlyteacher.homepage.adapter.RecommendLecturesAdapter;
+import com.leedopoem.ljh.friendlyteacher.newmessage.homepage.adapter.RecommendLecturesAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

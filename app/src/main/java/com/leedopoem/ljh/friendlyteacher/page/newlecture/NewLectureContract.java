@@ -1,4 +1,4 @@
-package com.leedopoem.ljh.friendlyteacher.newlecture;
+package com.leedopoem.ljh.friendlyteacher.page.newlecture;
 
 import com.leedopoem.ljh.friendlyteacher.base.BasePresenter;
 import com.leedopoem.ljh.friendlyteacher.base.BaseView;

@@ -1,8 +1,5 @@
-package com.leedopoem.ljh.friendlyteacher.homepage;
+package com.leedopoem.ljh.friendlyteacher.newmessage.homepage;
 
-import android.graphics.Color;
-import android.os.Build;
-import android.os.Bundle;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -14,15 +11,15 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
+
 import com.leedopoem.ljh.friendlyteacher.R;
 import com.leedopoem.ljh.friendlyteacher.base.BaseActivity;
 import com.leedopoem.ljh.friendlyteacher.data.LectureRepository;
-import com.leedopoem.ljh.friendlyteacher.homepage.fragment.communicate.CommunicateFragment;
-import com.leedopoem.ljh.friendlyteacher.homepage.fragment.communicate.CommunicatePresenter;
-import com.leedopoem.ljh.friendlyteacher.homepage.fragment.personal.PersonalFragment;
-import com.leedopoem.ljh.friendlyteacher.homepage.fragment.recommend.RecommendFragment;
-import com.leedopoem.ljh.friendlyteacher.homepage.fragment.recommend.RecommendPresenter;
+import com.leedopoem.ljh.friendlyteacher.newmessage.homepage.fragment.communicate.CommunicateFragment;
+import com.leedopoem.ljh.friendlyteacher.newmessage.homepage.fragment.communicate.CommunicatePresenter;
+import com.leedopoem.ljh.friendlyteacher.newmessage.homepage.fragment.personal.PersonalFragment;
+import com.leedopoem.ljh.friendlyteacher.newmessage.homepage.fragment.recommend.RecommendFragment;
+import com.leedopoem.ljh.friendlyteacher.newmessage.homepage.fragment.recommend.RecommendPresenter;
 import com.leedopoem.ljh.friendlyteacher.utils.ActivityUtils;
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.leedopoem.ljh.friendlyteacher.homepage.fragment.recommend;
+package com.leedopoem.ljh.friendlyteacher.newmessage.homepage.fragment.recommend;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,11 +6,7 @@ import android.content.Intent;
 import com.leedopoem.ljh.friendlyteacher.base.MyApplication;
 import com.leedopoem.ljh.friendlyteacher.data.LectureRepository;
 import com.leedopoem.ljh.friendlyteacher.data.entity.Lecture;
-import com.leedopoem.ljh.friendlyteacher.newlecture.PublishNewLectureActivity;
-import com.leedopoem.ljh.friendlyteacher.homepage.HomePageActivity;
-import com.leedopoem.ljh.friendlyteacher.newlecture.NewLectureContract;
-import com.leedopoem.ljh.friendlyteacher.newlecture.PublishNewLectureActivity;
-import com.leedopoem.ljh.friendlyteacher.newmessage.NewMessageActivity;
+import com.leedopoem.ljh.friendlyteacher.page.newlecture.PublishNewLectureActivity;
 
 
 import java.util.List;

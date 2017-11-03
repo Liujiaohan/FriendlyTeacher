@@ -1,4 +1,4 @@
-package com.leedopoem.ljh.friendlyteacher.newlecture;
+package com.leedopoem.ljh.friendlyteacher.page.newlecture;
 
 import android.os.Bundle;
 import android.view.View;

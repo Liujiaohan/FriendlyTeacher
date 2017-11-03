@@ -1,4 +1,4 @@
-package com.leedopoem.ljh.friendlyteacher.homepage.fragment.personal;
+package com.leedopoem.ljh.friendlyteacher.newmessage.homepage.fragment.personal;
 
 import com.leedopoem.ljh.friendlyteacher.data.LectureRepository;
 
@@ -37,5 +37,8 @@ public class PersonalPresenter implements PersonalConstract.Presenter {
     @Override
     public void loadPersenalInfo() {
         // TODO: 2017/11/2 0002 等后台接口
+
+
+        //mPersonalView.showPersonalInfo();
     }
 }

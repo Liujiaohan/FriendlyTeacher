@@ -1,4 +1,4 @@
-package com.leedopoem.ljh.friendlyteacher.homepage.fragment.communicate;
+package com.leedopoem.ljh.friendlyteacher.newmessage.homepage.fragment.communicate;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 
 import com.leedopoem.ljh.friendlyteacher.R;
 import com.leedopoem.ljh.friendlyteacher.data.entity.LeaveWord;
-import com.leedopoem.ljh.friendlyteacher.homepage.adapter.LeaveWordsAdapter;
+import com.leedopoem.ljh.friendlyteacher.newmessage.homepage.adapter.LeaveWordsAdapter;
 
 import java.util.List;
 

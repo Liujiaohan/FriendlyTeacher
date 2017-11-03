@@ -7,20 +7,21 @@ import lombok.Data;
  */
 @Data
 public class PersonalMainPageInfo {
-    private String UserName;
-    private String Introduction;
-    private int NoticedNum;
-    private int FansNum;
-    private int PublishedLectureNum;
-    private int StudingLectureNum;
-    private int CollectedLectureNum;
+    private String userName;
+    private String introduction;
+    private int noticedNum;
+    private int fansNum;
+    private int publishedLectureNum;
+    private int studingLectureNum;
+    private int collectedLectureNum;
 
-    public PersonalMainPageInfo(int noticedNum, int fansNum, int publishedLectureNum, int studingLectureNum, int collectedLectureNum) {
-        NoticedNum = noticedNum;
-        FansNum = fansNum;
-        PublishedLectureNum = publishedLectureNum;
-        StudingLectureNum = studingLectureNum;
-        CollectedLectureNum = collectedLectureNum;
+    public PersonalMainPageInfo(String userName, String introduction, int noticedNum, int fansNum, int publishedLectureNum, int studingLectureNum, int collectedLectureNum) {
+        this.userName = userName;
+        this.introduction = introduction;
+        this.noticedNum = noticedNum;
+        this.fansNum = fansNum;
+        this.publishedLectureNum = publishedLectureNum;
+        this.studingLectureNum = studingLectureNum;
+        this.collectedLectureNum = collectedLectureNum;
     }
-
 }

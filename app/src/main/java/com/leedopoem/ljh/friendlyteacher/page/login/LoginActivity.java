@@ -1,4 +1,4 @@
-package com.leedopoem.ljh.friendlyteacher.login;
+package com.leedopoem.ljh.friendlyteacher.page.login;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.widget.Button;
 import com.leedopoem.ljh.friendlyteacher.R;
 import com.leedopoem.ljh.friendlyteacher.base.BaseActivity;
 import com.leedopoem.ljh.friendlyteacher.data.LectureRepository;
-import com.leedopoem.ljh.friendlyteacher.homepage.HomePageActivity;
+import com.leedopoem.ljh.friendlyteacher.newmessage.homepage.HomePageActivity;
 
 public class LoginActivity extends BaseActivity implements LoginContract.View {
 

@@ -1,4 +1,4 @@
-package com.leedopoem.ljh.friendlyteacher.homepage.fragment.recommend;
+package com.leedopoem.ljh.friendlyteacher.newmessage.homepage.fragment.recommend;
 
 import com.leedopoem.ljh.friendlyteacher.base.BasePresenter;
 import com.leedopoem.ljh.friendlyteacher.base.BaseView;

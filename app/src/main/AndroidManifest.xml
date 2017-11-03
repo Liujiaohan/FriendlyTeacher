@@ -14,7 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".login.LoginActivity">
+        <activity android:name=".page.login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,11 +22,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".base.BaseActivity" />
-        <activity android:name=".newlecture.PublishNewLectureActivity" />
+        <activity android:name=".page.newlecture.PublishNewLectureActivity" />
         <activity android:name=".newmessage.NewMessageActivity" />
-        <activity android:name=".lecturedetail.LectureDetailActivity" />
-        <activity android:name=".homepage.HomePageActivity" />
-        <activity android:name=".personaldetailmessage.DetailMessageActivity"></activity>
+        <activity android:name=".page.lecturedetail.LectureDetailActivity" />
+        <activity android:name=".newmessage.homepage.HomePageActivity" />
+        <activity android:name=".personaldetailmessage.DetailMessageActivity" />
+        <activity android:name=".page.personalsetting.PersonalMessageSettingActivity" />
+        <activity android:name=".page.zhuce.ZhuceActivity"></activity>
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.leedopoem.ljh.friendlyteacher.homepage.fragment.personal;
+package com.leedopoem.ljh.friendlyteacher.newmessage.homepage.fragment.personal;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,8 +14,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.leedopoem.ljh.friendlyteacher.R;
-import com.leedopoem.ljh.friendlyteacher.data.entity.PersonalInfo;
-import com.leedopoem.ljh.friendlyteacher.personaldetailmessage.DetailMessageActivity;
+import com.leedopoem.ljh.friendlyteacher.data.entity.PersonalMainPageInfo;
+import com.leedopoem.ljh.friendlyteacher.page.personalsetting.PersonalMessageSettingActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -111,7 +111,7 @@ public class PersonalFragment extends Fragment implements PersonalConstract.View
     }
 
     @Override
-    public void showPersonalInfo(PersonalInfo info) {
+    public void showPersonalInfo(PersonalMainPageInfo info) {
         UserNameText.setText(info.getUserName());
         IntroductionText.setText(info.getIntroduction());
         NoticedNumText.setText(info.getNoticedNum());
@@ -126,7 +126,7 @@ public class PersonalFragment extends Fragment implements PersonalConstract.View
         switch (v.getId()) {
             case R.id.personal_setting_btn: {
                 /*Log.i(TAG,"setting")*/;
-                Intent intent = new Intent(context, DetailMessageActivity.class);
+                Intent intent = new Intent(context, PersonalMessageSettingActivity.class);
                 context.startActivity(intent);
                 /*Log.i(TAG,"setting");*/
                 break;
