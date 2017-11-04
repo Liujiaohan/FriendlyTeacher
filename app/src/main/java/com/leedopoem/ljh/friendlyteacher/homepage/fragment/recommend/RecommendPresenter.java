@@ -2,10 +2,13 @@ package com.leedopoem.ljh.friendlyteacher.homepage.fragment.recommend;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
 
 import com.leedopoem.ljh.friendlyteacher.base.MyApplication;
 import com.leedopoem.ljh.friendlyteacher.data.LectureRepository;
 import com.leedopoem.ljh.friendlyteacher.data.entity.Lecture;
+import com.leedopoem.ljh.friendlyteacher.lecturedetail.LectureDetailActivity;
 import com.leedopoem.ljh.friendlyteacher.newlecture.PublishNewLectureActivity;
 import com.leedopoem.ljh.friendlyteacher.homepage.HomePageActivity;
 import com.leedopoem.ljh.friendlyteacher.newlecture.NewLectureContract;
@@ -60,6 +63,7 @@ public class RecommendPresenter implements RecommendContract.Presenter {
                 .subscribe(new Consumer<List<Lecture>>(){
                     @Override
                     public void accept(List<Lecture> lectures) throws Exception {
+                        Log.i("TAG", "accept: "+lectures);
                         mHomepageView.showLectures(lectures);
                     }
                 });
@@ -74,8 +78,10 @@ public class RecommendPresenter implements RecommendContract.Presenter {
     }
 
     @Override
-    public void openLectureDetails() {
-
+    public void openLectureDetails(Lecture lecture) {
+        Intent intent=new Intent(context, LectureDetailActivity.class);
+        intent.putExtra("lecture",lecture);
+        context.startActivity(intent);
     }
 
 }

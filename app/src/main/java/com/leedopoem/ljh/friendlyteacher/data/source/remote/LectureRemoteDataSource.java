@@ -59,8 +59,8 @@ public class LectureRemoteDataSource implements IRemoteDataSource {
     }
 
     @Override
-    public Observable<Result> publishLecture(Lecture lecture) {
-        return apiServiceManager.publishLecture(lecture);
+    public Observable<Result> publishLecture(Lecture lecture,String token) {
+        return apiServiceManager.publishLecture(lecture,token);
     }
 
     @Override

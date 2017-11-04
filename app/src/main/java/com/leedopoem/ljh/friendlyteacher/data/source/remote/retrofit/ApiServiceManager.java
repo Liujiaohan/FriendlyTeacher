@@ -13,6 +13,8 @@ import java.util.List;
 import io.reactivex.Observable;
 import io.reactivex.Scheduler;
 import io.reactivex.schedulers.Schedulers;
+import okhttp3.MediaType;
+import okhttp3.RequestBody;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -40,7 +42,9 @@ public class ApiServiceManager implements IRemoteDataSource{
 
     @Override
     public Observable<Result> registAsUser(User user) {
-        return lectureService.registAsUser(user);
+        return lectureService.registAsUser(RequestBody
+                .create(MediaType.parse("application/json"),toString()))
+                .subscribeOn(Schedulers.io());
     }
 
     @Override
@@ -50,7 +54,9 @@ public class ApiServiceManager implements IRemoteDataSource{
 
     @Override
     public Observable<Result> alterUserInformation(User user) {
-        return lectureService.alterUserInformation(user.getUid(),user).subscribeOn(Schedulers.io());
+        return lectureService.alterUserInformation(user.getUid(),RequestBody
+                .create(MediaType.parse("application/json"),toString()))
+                .subscribeOn(Schedulers.io());
     }
 
     @Override
@@ -70,8 +76,9 @@ public class ApiServiceManager implements IRemoteDataSource{
     }
 
     @Override
-    public Observable<Result> publishLecture(Lecture lecture) {
-        return lectureService.publishLecture(lecture).subscribeOn(Schedulers.io());
+    public Observable<Result> publishLecture(Lecture lecture,String token) {
+        return lectureService.publishLecture(RequestBody.create(MediaType.parse("application/json")
+                ,lecture.toString()),token).subscribeOn(Schedulers.io());
     }
 
     @Override
@@ -92,6 +99,8 @@ public class ApiServiceManager implements IRemoteDataSource{
     //注意 此为测试
     @Override
     public Observable<Result> alterLectureInformation(Lecture lecture) {
-        return lectureService.alterLectureInformation("1",lecture).subscribeOn(Schedulers.io());
+        return lectureService.alterLectureInformation("1",RequestBody
+                .create(MediaType.parse("application/json"),toString()))
+                .subscribeOn(Schedulers.io());
     }
 }

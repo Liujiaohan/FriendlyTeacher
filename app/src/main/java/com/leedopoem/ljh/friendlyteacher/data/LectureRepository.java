@@ -2,7 +2,9 @@ package com.leedopoem.ljh.friendlyteacher.data;
 
 import android.content.Context;
 import android.util.Log;
+import android.widget.Toast;
 
+import com.leedopoem.ljh.friendlyteacher.base.MyApplication;
 import com.leedopoem.ljh.friendlyteacher.data.source.local.ILocalDataSource;
 import com.leedopoem.ljh.friendlyteacher.data.source.local.LectureLocalDataSource;
 import com.leedopoem.ljh.friendlyteacher.data.source.remote.IRemoteDataSource;
@@ -16,6 +18,8 @@ import com.leedopoem.ljh.friendlyteacher.utils.RxConverter;
 import java.util.List;
 
 import io.reactivex.Observable;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.functions.Consumer;
 
 /**
  * Created by ljh on 17-9-27.
@@ -89,11 +93,21 @@ public class LectureRepository implements ILocalDataSource,IRemoteDataSource {
     }
 
     @Override
-    public Observable<Result> publishLecture(Lecture lecture) {
+    public Observable<Result> publishLecture(Lecture lecture,String token) {
         if (netAvailable) {
-            return mRemoteDataSource.publishLecture(lecture);
+            Observable<Result> observable=mRemoteDataSource.publishLecture(lecture,token);
+            observable
+                    .subscribeOn(AndroidSchedulers.mainThread())
+                    .subscribe(new Consumer<Result>() {
+                @Override
+                public void accept(Result result) throws Exception {
+                    Toast.makeText(MyApplication.getINSTANCE(),result.getMessage().getResult(),
+                            Toast.LENGTH_LONG);
+                }
+            });
+            return observable;
         }
-        Log.i(TAG, "publishLecture: "+"发布任务失败");
+       // Log.i(TAG, "publishLecture: "+"发布任务失败");
         return null;
     }
 

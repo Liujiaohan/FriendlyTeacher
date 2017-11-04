@@ -15,6 +15,8 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
+
 import com.leedopoem.ljh.friendlyteacher.R;
 import com.leedopoem.ljh.friendlyteacher.base.BaseActivity;
 import com.leedopoem.ljh.friendlyteacher.data.LectureRepository;
@@ -57,42 +59,34 @@ public class HomePageActivity extends BaseActivity implements ViewPager.OnPageCh
     private void initUI() {
         toolbar= (Toolbar) findViewById(R.id.toolbar);
         drawerLayout= (DrawerLayout) findViewById(R.id.drawer_layout);
-      //  viewPage= (ViewPager) findViewById(R.id.home_viewPage);
         bottomNavigationView= (BottomNavigationView) findViewById(R.id.bottom_navigation_view);
         setSupportActionBar(toolbar);
-
-//        viewPage.addOnPageChangeListener(this);
-//        viewPage.setOffscreenPageLimit(3);
-//        viewPageAdapter=new ViewPageAdapter(getSupportFragmentManager());
+        viewPageAdapter=new ViewPageAdapter(getSupportFragmentManager());
         mRecommendFragment= RecommendFragment.newInstance("recommend_fragment");
         mRecommendPresenter=new RecommendPresenter(this,mRepository,mRecommendFragment);
         mCommunicateFragment=CommunicateFragment.newInstance("communicate_fragment");
         mCommunicatePresenter=new CommunicatePresenter(mRepository,mCommunicateFragment);
         mPersonalFragment=new PersonalFragment();
-//
-//        viewPageAdapter.addFragment(mRecommendFragment);
-//        viewPageAdapter.addFragment(mCommunicateFragment);
-//        viewPageAdapter.addFragment(mPersonalFragment);
-//
-//        viewPage.setAdapter(viewPageAdapter);
+
         ActivityUtils.addFragmentToActivity(getSupportFragmentManager(),
                 mRecommendFragment,R.id.container);
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.
+                OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.home_navigation:
-                      //  viewPage.setCurrentItem(0);
+
                         ActivityUtils.replaceFragment(getSupportFragmentManager(),
                                 mRecommendFragment,R.id.container);
                         break;
                     case R.id.chat_navigation:
-                        //viewPage.setCurrentItem(1);
+
                         ActivityUtils.replaceFragment(getSupportFragmentManager(),
                                 mCommunicateFragment,R.id.container);
                         break;
                     case R.id.personal_navigation:
-                        //viewPage.setCurrentItem(2);
+
                         ActivityUtils.replaceFragment(getSupportFragmentManager(),
                                 mPersonalFragment,R.id.container);
                         break;
@@ -137,7 +131,6 @@ public class HomePageActivity extends BaseActivity implements ViewPager.OnPageCh
         public void addFragment(Fragment f){
             list.add(f);
         }
-
 
     }
 }

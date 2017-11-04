@@ -44,7 +44,9 @@ public class NewLecturePresentImpl implements NewLectureContract.Presenter {
     @Override
     public void publishLecture() {
         Lecture newLecture = mView.getContentLecture();
-        mRepository.publishLecture(newLecture)
+        mRepository.publishLecture(newLecture,"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJZb3VTaGktU2VjdXJpdHk" +
+                "tQmFzaWMiLCJzdWIiOiIxNTA5NjMzMTQ3MzgwMzcyIiwiYXVkIjo" +
+                "idXNlciIsImV4cCI6MTUxMjM3ODU2NiwiaWF0IjoxNTA5Nzg2NTY2LCJqdGkiOiIxIn0.gXb5lXZQAIkdX3APhddHT75kWAg2zhA_i5HmucPslGQ")
                 .doOnNext(new Consumer<Result>() {
                     @Override
                     public void accept(Result result) throws Exception {
