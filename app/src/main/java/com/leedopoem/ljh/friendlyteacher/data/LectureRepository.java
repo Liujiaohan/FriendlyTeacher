@@ -97,12 +97,12 @@ public class LectureRepository implements ILocalDataSource,IRemoteDataSource {
         if (netAvailable) {
             Observable<Result> observable=mRemoteDataSource.publishLecture(lecture,token);
             observable
-                    .subscribeOn(AndroidSchedulers.mainThread())
+                    .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(new Consumer<Result>() {
                 @Override
                 public void accept(Result result) throws Exception {
-                    Toast.makeText(MyApplication.getINSTANCE(),result.getMessage().getResult(),
-                            Toast.LENGTH_LONG);
+                    Toast.makeText(MyApplication.getINSTANCE(),"发布成功",
+                            Toast.LENGTH_LONG).show();
                 }
             });
             return observable;

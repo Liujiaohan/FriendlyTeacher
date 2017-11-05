@@ -98,6 +98,7 @@ public class PublishNewLectureActivity extends BaseActivity implements
             }
             case R.id.newlecture_finish_btn: {
                 mPresenter.publishLecture(this);
+                finish();
                 break;
             }
         }

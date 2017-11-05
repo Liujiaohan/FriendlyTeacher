@@ -48,14 +48,9 @@ public class NewLecturePresentImpl implements NewLectureContract.Presenter {
     @Override
     public void publishLecture(final Context context) {
         Lecture newLecture = mView.getContentLecture();
-        mRepository.publishLecture(newLecture,"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJZb3VTaGktU2VjdXJpdHktQmFzaWMiLCJzdWIiOiIxNTA5NjMzMTQ3MzgwMzcyIiwiYXVkIjoidXNlciIsImV4cCI6MTUxMjQ3NjgxMCwiaWF0IjoxNTA5ODg0ODEwLCJqdGkiOiIxIn0.5VDOGTsiejv6-K3I52-ix5g5PyRJDI1LPpWWYzI-CrU")
-                .subscribe(new Consumer<Result>() {
-                    @Override
-                    public void accept(Result result) throws Exception {
-                        Log.i("NewLecture", "accept: "+result.getMessage().getResult());
-                        ((Activity)context).finish();
-                    }
-                });
+        mRepository.publishLecture(newLecture,"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJZb3VTaGktU2Vjd" +
+                "XJpdHktQmFzaWMiLCJzdWIiOiIxNTA5NjMzMTQ3MzgwMzcyIiwiYXVkIjoidXNlciIsImV4cCI6M" +
+                "TUxMjQ3NjgxMCwiaWF0IjoxNTA5ODg0ODEwLCJqdGkiOiIxIn0.5VDOGTsiejv6-K3I52-ix5g5PyRJDI1LPpWWYzI-CrU");
     }
 
     @Override

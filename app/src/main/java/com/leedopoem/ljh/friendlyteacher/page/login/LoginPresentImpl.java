@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.leedopoem.ljh.friendlyteacher.base.MyApplication;
 import com.leedopoem.ljh.friendlyteacher.data.LectureRepository;
@@ -52,13 +53,14 @@ public class LoginPresentImpl implements LoginContract.Presenter {
                 .subscribe(new Consumer<Result>() {
                     @Override
                     public void accept(Result result) throws Exception {
-                        if (result != null) {
+                        if (result.getMessage().getResult().equals("登录成功")) {
                             mView.loginSuccess();
                             SharedPreferences sharedPreferences=MyApplication.getINSTANCE().getSharedPreferences("auth", Context.MODE_PRIVATE);
                             SharedPreferences.Editor editor=sharedPreferences.edit();
                             Intent intent = new Intent(MyApplication.getContext(), HomePageActivity.class);
                             MyApplication.getINSTANCE().startActivity(intent);
                         } else {
+                            Toast.makeText(MyApplication.getINSTANCE(),"密码错误",Toast.LENGTH_LONG).show();
                             mView.loginError();
                         }
                     }
