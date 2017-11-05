@@ -48,12 +48,12 @@ public class RecommendLecturesAdapter extends RecyclerView.Adapter<RecommendLect
     }
 
     @Override
-    public void onBindViewHolder(LectureViewHolder holder, int position) {
-        Lecture lecture=lectures.get(position);
+    public void onBindViewHolder(LectureViewHolder holder, final int position) {
+        final Lecture lecture=lectures.get(position);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onItemClickListener.onLectureClick();
+                onItemClickListener.onLectureClick(lectures.get(position));
             }
         });
         holder.tvLectureName.setText(lecture.getLectureName());
@@ -85,7 +85,7 @@ public class RecommendLecturesAdapter extends RecyclerView.Adapter<RecommendLect
     }
 
     public interface OnItemClickListener{
-        void onLectureClick();
+        void onLectureClick(Lecture lecture);
         void onStared();
     }
 }

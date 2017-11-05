@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.leedopoem.ljh.friendlyteacher.R;
@@ -82,7 +83,8 @@ public class PublishNewLectureActivity extends BaseActivity implements
         String introduction = introductionEdt.getText().toString();
         //不会获取id和uid
         //不需要授课人？
-        Lecture newLecture = new Lecture((long)0, "", className, classStartTime, classPlace, lectureTime, lectureType, introduction);
+        Lecture newLecture = new Lecture((long)0, "1509633147380372",
+                className, classStartTime, classPlace, lectureTime, lectureType, introduction);
         return newLecture;
     }
 
@@ -96,7 +98,6 @@ public class PublishNewLectureActivity extends BaseActivity implements
             }
             case R.id.newlecture_finish_btn: {
                 mPresenter.publishLecture();
-                Toast.makeText(this,"发布成功",Toast.LENGTH_SHORT).show();
                 finish();
                 break;
             }

@@ -1,6 +1,10 @@
 package com.leedopoem.ljh.friendlyteacher.data.entity;
 
 
+import android.util.Log;
+
+import java.io.Serializable;
+
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 import lombok.Data;
@@ -9,7 +13,7 @@ import lombok.Data;
  * Created by ljh on 17-10-2.
  */
 
-public class Lecture extends RealmObject{
+public class Lecture extends RealmObject implements Serializable{
 
     @PrimaryKey
     private Long id;
@@ -109,5 +113,20 @@ public class Lecture extends RealmObject{
 
     public void setIntroduction(String introduction) {
         this.introduction = introduction;
+    }
+
+    @Override
+    public String toString() {
+        String s="{" +
+                "\"uid\" : "+"\"U201617233\", " +
+                "\"lectureName\" : " + "\""+lectureName + "\", " +
+                "\"location\" : " + "\""+location + "\", " +
+                "\"startingTime\" : " +"\""+startingTime +"\", "+
+                "\"endingTime\" : " + "\""+endingTime + "\", " +
+                "\"classTime\" : " + "\""+classTime + "\", "+
+                "\"introduction\" : " + "\""+introduction + "\"" +
+                "}";
+        Log.i("TAG", "toString: "+s);
+        return  s;
     }
 }

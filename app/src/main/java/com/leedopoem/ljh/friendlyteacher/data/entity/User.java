@@ -1,5 +1,7 @@
 package com.leedopoem.ljh.friendlyteacher.data.entity;
 
+import android.util.Log;
+
 import lombok.Data;
 
 /**
@@ -23,5 +25,19 @@ public class User {
         this.password = password;
         this.classInfo = classInfo;
         this.introduction = introduction;
+    }
+
+    @Override
+    public String toString() {
+          String s="{" +
+                "\"uid\" : "+"\"U201617233\", " +
+                "\"username\" : " + "\""+username + "\", " +
+                "\"email\" : " + "\""+email + "\", " +
+                "\"password\" : " +"\""+password +"\", "+
+                "\"classInfo\" : " + "\""+classInfo + "\", " +
+                "\"introduction\" : " + "\""+introduction + "\"" +
+                "}";
+          Log.i("TAG", "toString: "+s);
+          return s;
     }
 }

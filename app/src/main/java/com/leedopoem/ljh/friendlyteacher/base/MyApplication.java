@@ -2,6 +2,7 @@ package com.leedopoem.ljh.friendlyteacher.base;
 
 import android.app.Application;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 
 import io.realm.Realm;
@@ -25,6 +26,7 @@ public class MyApplication extends Application {
         RealmConfiguration configuration=new RealmConfiguration.Builder(this).build();
         Realm.setDefaultConfiguration(configuration);
     }
+
 
     public static Context getContext() {
         return context;

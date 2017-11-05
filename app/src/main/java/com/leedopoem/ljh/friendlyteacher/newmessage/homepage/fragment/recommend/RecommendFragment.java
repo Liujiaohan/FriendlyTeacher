@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.leedopoem.ljh.friendlyteacher.R;
 import com.leedopoem.ljh.friendlyteacher.base.MyApplication;
@@ -28,11 +29,13 @@ public class RecommendFragment extends Fragment implements RecommendContract.Vie
     private static final String FRAGMENT_ID="FRAGMENT_ID";
 
     private RecommendContract.Presenter mPresenter;
+    private TextView mTitle;
     private RecyclerView mLectureRecyclerList;
     private FloatingActionButton mFab;
     private RecommendLecturesAdapter mAdapter;
     private SwipeRefreshLayout swipeRefreshLayout;
     private boolean isRefresh=false;
+    private List<Lecture> list;
 
     public static RecommendFragment newInstance(String fragmentId){
         Bundle argument=new Bundle();
@@ -48,24 +51,27 @@ public class RecommendFragment extends Fragment implements RecommendContract.Vie
                              @Nullable Bundle savedInstanceState) {
         //获得初始化控件
         View root =inflater.inflate(R.layout.fragment_homepage,container,false);
+        mTitle=root.findViewById(R.id.title);
         mLectureRecyclerList=root.findViewById(R.id.recommend_lectures_list);
         swipeRefreshLayout=root.findViewById(R.id.swipeRefresh_recommend);
         mFab=root.findViewById(R.id.fab_homePage);
-
+        list=new ArrayList<>();
+        mTitle.setText("推荐课程");
         return root;
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        mAdapter=new RecommendLecturesAdapter(new ArrayList<Lecture>(),
+        mAdapter=new RecommendLecturesAdapter(list,
                 new RecommendLecturesAdapter.OnItemClickListener() {
                     @Override
-                    public void onLectureClick() {
-                        mPresenter.openLectureDetails();
+                    public void onLectureClick(Lecture lecture) {
+                        mPresenter.openLectureDetails(lecture);
                     }
 
                     @Override
                     public void onStared() {
+
                     }
                 });
 

@@ -1,7 +1,13 @@
 package com.leedopoem.ljh.friendlyteacher.page.login;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+
+import com.leedopoem.ljh.friendlyteacher.base.MyApplication;
 import com.leedopoem.ljh.friendlyteacher.data.LectureRepository;
 import com.leedopoem.ljh.friendlyteacher.data.entity.Result;
+import com.leedopoem.ljh.friendlyteacher.newmessage.homepage.HomePageActivity;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
@@ -46,10 +52,15 @@ public class LoginPresentImpl implements LoginContract.Presenter {
                     public void accept(Result result) throws Exception {
                         if (result != null) {
                             mView.loginSuccess();
+                            SharedPreferences sharedPreferences=MyApplication.getINSTANCE().getSharedPreferences("auth", Context.MODE_PRIVATE);
+                            SharedPreferences.Editor editor=sharedPreferences.edit();
+                            Intent intent = new Intent(MyApplication.getContext(), HomePageActivity.class);
+                            MyApplication.getINSTANCE().startActivity(intent);
                         } else {
                             mView.loginError();
                         }
                     }
                 });
+        mCompositeDisposable.add(disposable);
     }
 }

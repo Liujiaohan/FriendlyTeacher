@@ -9,9 +9,12 @@ import java.util.List;
 
 import io.reactivex.Observable;
 
+import okhttp3.RequestBody;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
+import retrofit2.http.HEAD;
+import retrofit2.http.Header;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
 import retrofit2.http.Path;
@@ -30,7 +33,7 @@ public interface LectureService {
 
     //注册
     @POST("user")
-    Observable<Result> registAsUser(@Body User user);
+    Observable<Result> registAsUser(@Body RequestBody user);
 
     //用户
     //登录
@@ -38,9 +41,9 @@ public interface LectureService {
     Observable<Result> login(@Query("email") String email,@Query("password") String password);
     //修改用户信息
     @PUT("user/{uid}")
-    Observable<Result> alterUserInformation(@Path("user") String uid, @Body User user);
+    Observable<Result> alterUserInformation(@Path("user") String uid, @Body RequestBody user);
     //获取用户信息
-    @GET("/user/{uid}")
+    @GET("user/{uid}")
     Observable<User> getUserInformation(@Path("uid") String uid);
 
 
@@ -50,7 +53,7 @@ public interface LectureService {
     Observable<List<Lecture>> getAllLectures();
     //发布某个课程
     @POST("lecture")
-    Observable<Result> publishLecture(@Body Lecture lecture);
+    Observable<Result> publishLecture(@Body RequestBody lecture,@Header("auth") String token);
     //获取某个用户的课程
     @GET("lecture/{uid}")
     Observable<List<Lecture>> getLecturesByUid(@Path("uid") String uid);
@@ -62,6 +65,5 @@ public interface LectureService {
     Observable<Result> deleteLecture(@Path("lid") String lid);
     //修改课程信息
     @PUT("lecture/{lid}")
-    Observable<Result> alterLectureInformation(@Path("lid") String lid,@Body Lecture lecture);
-
+    Observable<Result> alterLectureInformation(@Path("lid") String lid,@Body RequestBody lecture);
 }

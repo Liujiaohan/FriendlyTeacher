@@ -19,6 +19,6 @@ public class RecommendContract {
     interface Presenter extends BasePresenter{
         void loadRecommendLecture();
         void addNewLecture();
-        void openLectureDetails();
+        void openLectureDetails(Lecture lecture);
     }
 }

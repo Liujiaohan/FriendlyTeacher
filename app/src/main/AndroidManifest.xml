@@ -29,6 +29,7 @@
         <activity android:name=".page.personalsetting.PersonalMessageSettingActivity" />
         <activity android:name=".page.zhuce.ZhuceActivity" />
         <activity android:name=".page.findpassword.FindPasswordActivity"></activity>
+
     </application>
 
 </manifest>

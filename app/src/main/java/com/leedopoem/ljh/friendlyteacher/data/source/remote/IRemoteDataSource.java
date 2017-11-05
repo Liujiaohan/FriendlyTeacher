@@ -28,7 +28,7 @@ public interface IRemoteDataSource {
     //获得所有课程
     Observable<List<Lecture>> getAllLectures();
     //发布某个课程
-    Observable<Result> publishLecture(Lecture lecture);
+    Observable<Result> publishLecture(Lecture lecture,String token);
     //获取用户的某个课程
     Observable<List<Lecture>> getLecturesByUid(String uid);
     //获取某个课程
