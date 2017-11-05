@@ -13,7 +13,7 @@
         android:layout_marginBottom="11dp"
         android:orientation="horizontal">
         <Button
-            android:id="@+id/message_back_btn"
+            android:id="@+id/message_detail_back_btn"
             android:background="@mipmap/back"
             android:layout_marginTop="13dp"
             android:layout_marginLeft="13dp"
@@ -28,14 +28,14 @@
             android:layout_marginTop="11dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-        <Button
-            android:id="@+id/message_finish_btn"
-            android:background="@mipmap/finish"
-            android:layout_marginLeft="12dp"
-            android:layout_width="24dp"
-            android:layout_height="17dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginRight="15dp"/>
+        <!--<Button-->
+            <!--android:id="@+id/message_finish_btn"-->
+            <!--android:background="@mipmap/finish"-->
+            <!--android:layout_marginLeft="12dp"-->
+            <!--android:layout_width="24dp"-->
+            <!--android:layout_height="17dp"-->
+            <!--android:layout_marginTop="16dp"-->
+            <!--android:layout_marginRight="15dp"/>-->
     </LinearLayout>
     <TextView
         android:id="@+id/tv_lecture_detail_name"
