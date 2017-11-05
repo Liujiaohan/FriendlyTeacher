@@ -89,11 +89,11 @@
         android:layout_marginRight="70dp"
         android:layout_marginTop="-256dp"
         android:background="@drawable/login_button"
-        android:text="Button"
+        android:text="登录"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_text_zhuce"
-        app:layout_constraintHorizontal_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/login_text_zhuce" />
 
     <TextView
         android:id="@+id/login_text_findpassword"

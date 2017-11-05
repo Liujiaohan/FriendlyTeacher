@@ -1,5 +1,6 @@
 package com.leedopoem.ljh.friendlyteacher.newmessage.homepage.fragment.communicate;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -16,6 +17,7 @@ import android.widget.TextView;
 import com.leedopoem.ljh.friendlyteacher.R;
 import com.leedopoem.ljh.friendlyteacher.base.MyApplication;
 import com.leedopoem.ljh.friendlyteacher.data.entity.LeaveWord;
+import com.leedopoem.ljh.friendlyteacher.newmessage.NewMessageActivity;
 import com.leedopoem.ljh.friendlyteacher.newmessage.homepage.adapter.LeaveWordsAdapter;
 
 import java.util.ArrayList;
@@ -50,6 +52,14 @@ public class CommunicateFragment extends Fragment implements CommunicateContract
         mLeaveWordsRecycler=root.findViewById(R.id.communicate_list);
         swipeRefreshLayout=root.findViewById(R.id.communicate_swipRefresh);
         mFab=root.findViewById(R.id.fab_communicate);
+        LeaveWord leaveWord = new LeaveWord("寻小姐姐一起自习", "2017-11.2-12:10");
+        LeaveWord leaveWord2 = new LeaveWord("考研备战图书馆", "2017-11.1-11:50");
+        LeaveWord leaveWord3 = new LeaveWord("想找人一起约跑", "2017-11.1-9:10");
+        ArrayList<LeaveWord> list = new ArrayList<LeaveWord>();
+        list.add(leaveWord);
+        list.add(leaveWord2);
+        list.add(leaveWord3);
+
         mAdapter=new LeaveWordsAdapter(new ArrayList<LeaveWord>(),
                 new LeaveWordsAdapter.OnItemClickListener() {
                     @Override
@@ -67,25 +77,29 @@ public class CommunicateFragment extends Fragment implements CommunicateContract
             @Override
             public void onClick(View view) {
                 mPresenter.addLeaveWords();
+                Intent intent = new Intent(MyApplication.getContext(), NewMessageActivity.class);
+                MyApplication.getContext().startActivity(intent);
             }
         });
 
        //recyclerView设置adapter
         mLeaveWordsRecycler.setLayoutManager(new LinearLayoutManager(MyApplication.INSTANCE));
+        mAdapter.setData(list);
         mLeaveWordsRecycler.setAdapter(mAdapter);
 //
+
         //下拉刷新
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
                 if (!isRefresh){
-                    mPresenter.loadLeaveWords();
+                    swipeRefreshLayout.setRefreshing(false);
                 }
             }
         });
         titleTV= (TextView) root.findViewById(R.id.title);
         titleTV.setText("交流中心");
-        return super.onCreateView(inflater, container, savedInstanceState);
+        return root;
     }
 
     @Override

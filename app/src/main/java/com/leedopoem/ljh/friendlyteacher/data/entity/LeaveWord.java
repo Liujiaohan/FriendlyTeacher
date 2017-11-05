@@ -23,4 +23,9 @@ public class LeaveWord {
     public void setData(String data) {
         this.data = data;
     }
+
+    public LeaveWord(String content, String data) {
+        this.content = content;
+        this.data = data;
+    }
 }
