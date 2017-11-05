@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/blue_bg"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="11dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/zhuce_btn_back"
+            android:layout_width="12dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="13dp"
+            android:background="@mipmap/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="112dp"
+            android:layout_marginRight="97dp"
+            android:text="    注册    "
+            android:layout_marginTop="11dp"
+            android:textColor="@color/textBlue"
+            android:textSize="20dp"
+            tools:text="    注册    " />
+
+        <Button
+            android:id="@+id/zhuce_btn_ok"
+            android:layout_width="24dp"
+            android:layout_height="17dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="16dp"
+            android:background="@mipmap/finish" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="32dp">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="19dp"
+            android:layout_marginLeft="18dp"
+            android:text="学    号    :"
+            android:textColor="@color/text_grey"
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/zhuce_edt_xuehao"
+            android:layout_width="match_parent"
+            android:layout_height="19dp"
+            android:layout_marginLeft="12dp"
+            android:background="@null"
+            android:textColor="@color/text_black"
+            android:textSize="14dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="32dp">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="19dp"
+            android:layout_marginLeft="18dp"
+            android:text="姓    名    :"
+            android:textColor="@color/text_grey"
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/zhuce_edt_name"
+            android:layout_width="match_parent"
+            android:layout_height="19dp"
+            android:layout_marginLeft="12dp"
+            android:background="@null"
+            android:textColor="@color/text_black"
+            android:textSize="14dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="32dp">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="19dp"
+            android:layout_marginLeft="18dp"
+            android:text="邮    箱    :"
+            android:textColor="@color/text_grey"
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/zhuce_edt_email"
+            android:layout_width="match_parent"
+            android:layout_height="19dp"
+            android:layout_marginLeft="12dp"
+            android:background="@null"
+            android:textColor="@color/text_black"
+            android:textSize="14dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="32dp">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="19dp"
+            android:layout_marginLeft="18dp"
+            android:text="密    码    :"
+            android:textColor="@color/text_grey"
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/zhuce_edt_password"
+            android:layout_width="match_parent"
+            android:layout_height="19dp"
+            android:layout_marginLeft="12dp"
+            android:background="@null"
+            android:textColor="@color/text_black"
+            android:textSize="14dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="32dp">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="19dp"
+            android:layout_marginLeft="18dp"
+            android:text="专    业    :"
+            android:textColor="@color/text_grey"
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/zhuce_edt_profession"
+            android:layout_width="match_parent"
+            android:layout_height="19dp"
+            android:layout_marginLeft="12dp"
+            android:background="@null"
+            android:textColor="@color/text_black"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="32dp">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="19dp"
+            android:layout_marginLeft="18dp"
+            android:text="年    级    :"
+            android:textColor="@color/text_grey"
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/zhuce_edt_grade"
+            android:layout_width="match_parent"
+            android:layout_height="19dp"
+            android:layout_marginLeft="12dp"
+            android:background="@null"
+            android:textColor="@color/text_black"
+            android:textSize="14dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="32dp">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="19dp"
+            android:layout_marginLeft="18dp"
+            android:text="个性签名:"
+            android:textColor="@color/text_grey"
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/zhuce_edt_signature"
+            android:layout_width="match_parent"
+            android:layout_height="19dp"
+            android:layout_marginLeft="12dp"
+            android:background="@null"
+            android:textColor="@color/text_black"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        android:paddingTop="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="18dp"
+            android:text="个人简介:"
+            android:textColor="@color/text_grey"
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/zhuce_edt_introduction"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="18dp"
+            android:background="@null"
+            android:gravity="top"
+            android:minLines="5"
+            android:textColor="@color/text_black"
+            android:textSize="14dp" />
+    </LinearLayout>
+</LinearLayout>

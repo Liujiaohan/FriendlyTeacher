@@ -5,11 +5,11 @@
         android:title="主页">
     </item>
     <item android:id="@+id/chat_navigation"
-        android:icon="@mipmap/me"
+        android:icon="@mipmap/communicate"
         android:title="讨论">
     </item>
     <item android:id="@+id/personal_navigation"
-        android:icon="@mipmap/me"
+        android:icon="@mipmap/persen"
         android:title="个人中心">
     </item>
 </menu>
