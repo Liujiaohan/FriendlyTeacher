@@ -1,6 +1,7 @@
 package com.leedopoem.ljh.friendlyteacher.newmessage.homepage.adapter;
 
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,6 +55,7 @@ public class RecommendLecturesAdapter extends RecyclerView.Adapter<RecommendLect
             @Override
             public void onClick(View view) {
                 onItemClickListener.onLectureClick(lectures.get(position));
+                Log.i("TAG", "onClick: ");
             }
         });
         holder.tvLectureName.setText(lecture.getLectureName());

@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.leedopoem.ljh.friendlyteacher.R;
 import com.leedopoem.ljh.friendlyteacher.data.entity.LeaveWord;
+import com.leedopoem.ljh.friendlyteacher.data.entity.Lecture;
 
 import java.util.List;
 

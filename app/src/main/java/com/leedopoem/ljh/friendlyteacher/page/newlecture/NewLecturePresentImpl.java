@@ -1,11 +1,15 @@
 package com.leedopoem.ljh.friendlyteacher.page.newlecture;
 
+import android.app.Activity;
+import android.content.Context;
 import android.util.Log;
 
 import com.leedopoem.ljh.friendlyteacher.data.LectureRepository;
 import com.leedopoem.ljh.friendlyteacher.data.entity.Lecture;
 import com.leedopoem.ljh.friendlyteacher.data.entity.Result;
+import com.leedopoem.ljh.friendlyteacher.utils.ActivityUtils;
 
+import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.functions.Consumer;
 
@@ -42,15 +46,14 @@ public class NewLecturePresentImpl implements NewLectureContract.Presenter {
     }
 
     @Override
-    public void publishLecture() {
+    public void publishLecture(final Context context) {
         Lecture newLecture = mView.getContentLecture();
-        mRepository.publishLecture(newLecture,"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJZb3VTaGktU2VjdXJpdHk" +
-                "tQmFzaWMiLCJzdWIiOiIxNTA5NjMzMTQ3MzgwMzcyIiwiYXVkIjo" +
-                "idXNlciIsImV4cCI6MTUxMjM3ODU2NiwiaWF0IjoxNTA5Nzg2NTY2LCJqdGkiOiIxIn0.gXb5lXZQAIkdX3APhddHT75kWAg2zhA_i5HmucPslGQ")
-                .doOnNext(new Consumer<Result>() {
+        mRepository.publishLecture(newLecture,"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJZb3VTaGktU2VjdXJpdHktQmFzaWMiLCJzdWIiOiIxNTA5NjMzMTQ3MzgwMzcyIiwiYXVkIjoidXNlciIsImV4cCI6MTUxMjQ3NjgxMCwiaWF0IjoxNTA5ODg0ODEwLCJqdGkiOiIxIn0.5VDOGTsiejv6-K3I52-ix5g5PyRJDI1LPpWWYzI-CrU")
+                .subscribe(new Consumer<Result>() {
                     @Override
                     public void accept(Result result) throws Exception {
                         Log.i("NewLecture", "accept: "+result.getMessage().getResult());
+                        ((Activity)context).finish();
                     }
                 });
     }

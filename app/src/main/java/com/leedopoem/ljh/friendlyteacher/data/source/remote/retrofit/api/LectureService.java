@@ -37,11 +37,11 @@ public interface LectureService {
 
     //用户
     //登录
-    @GET("session")
+    @POST("session")
     Observable<Result> login(@Query("email") String email,@Query("password") String password);
     //修改用户信息
     @PUT("user/{uid}")
-    Observable<Result> alterUserInformation(@Path("user") String uid, @Body RequestBody user);
+    Observable<Result> alterUserInformation(@Path("uid") String uid, @Body RequestBody user);
     //获取用户信息
     @GET("user/{uid}")
     Observable<User> getUserInformation(@Path("uid") String uid);

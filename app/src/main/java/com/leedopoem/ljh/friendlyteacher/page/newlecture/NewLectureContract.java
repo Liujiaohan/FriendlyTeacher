@@ -1,5 +1,7 @@
 package com.leedopoem.ljh.friendlyteacher.page.newlecture;
 
+import android.content.Context;
+
 import com.leedopoem.ljh.friendlyteacher.base.BasePresenter;
 import com.leedopoem.ljh.friendlyteacher.base.BaseView;
 import com.leedopoem.ljh.friendlyteacher.data.entity.Lecture;
@@ -16,7 +18,7 @@ public class NewLectureContract {
 }
 
     interface Presenter extends BasePresenter {
-        void publishLecture();
+        void publishLecture(Context context);
         void confirmBack();
     }
 }

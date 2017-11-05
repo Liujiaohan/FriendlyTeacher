@@ -3,6 +3,7 @@ package com.leedopoem.ljh.friendlyteacher.page.login;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.util.Log;
 
 import com.leedopoem.ljh.friendlyteacher.base.MyApplication;
 import com.leedopoem.ljh.friendlyteacher.data.LectureRepository;
@@ -43,9 +44,10 @@ public class LoginPresentImpl implements LoginContract.Presenter {
     }
 
     @Override
-    public void login(String uid, String passward) {
+    public void login(String uid, String password) {
+        Log.i("TAG", "login: "+uid+"  "+password);
         Disposable disposable = mLectureRepository
-                .login(uid, passward)
+                .login(uid, password)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Consumer<Result>() {
                     @Override

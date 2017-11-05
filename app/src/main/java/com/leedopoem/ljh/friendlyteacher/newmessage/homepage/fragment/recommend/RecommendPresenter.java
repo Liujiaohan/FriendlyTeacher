@@ -75,6 +75,7 @@ public class RecommendPresenter implements RecommendContract.Presenter {
     public void openLectureDetails(Lecture lecture) {
         Intent intent=new Intent(context, LectureDetailActivity.class);
         intent.putExtra("lecture",lecture);
+        Log.i("TAG", "openLectureDetails: ");
         context.startActivity(intent);
     }
 

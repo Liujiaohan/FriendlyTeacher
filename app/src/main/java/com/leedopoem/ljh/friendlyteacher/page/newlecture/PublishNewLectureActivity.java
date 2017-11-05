@@ -83,7 +83,7 @@ public class PublishNewLectureActivity extends BaseActivity implements
         String introduction = introductionEdt.getText().toString();
         //不会获取id和uid
         //不需要授课人？
-        Lecture newLecture = new Lecture((long)0, "1509633147380372",
+        Lecture newLecture = new Lecture((long)0, "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJZb3VTaGktU2VjdXJpdHktQmFzaWMiLCJzdWIiOiIxNTA5NjMzMTQ3MzgwMzcyIiwiYXVkIjoidXNlciIsImV4cCI6MTUxMjM3ODU2NiwiaWF0IjoxNTA5Nzg2NTY2LCJqdGkiOiIxIn0.gXb5lXZQAIkdX3APhddHT75kWAg2zhA_i5HmucPslGQ",
                 className, classStartTime, classPlace, lectureTime, lectureType, introduction);
         return newLecture;
     }
@@ -97,8 +97,7 @@ public class PublishNewLectureActivity extends BaseActivity implements
                 break;
             }
             case R.id.newlecture_finish_btn: {
-                mPresenter.publishLecture();
-                finish();
+                mPresenter.publishLecture(this);
                 break;
             }
         }
