@@ -20,7 +20,7 @@
             android:layout_width="12dp"
             android:layout_height="24dp" />
         <TextView
-            android:text="@string/publishMessage"
+            android:text="课程详情"
             android:layout_marginLeft="112dp"
             android:textSize="20dp"
             android:layout_marginRight="97dp"
@@ -37,4 +37,147 @@
             android:layout_marginTop="16dp"
             android:layout_marginRight="15dp"/>
     </LinearLayout>
+    <TextView
+        android:id="@+id/tv_lecture_detail_name"
+        tools:text="杜恩博完美课堂"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:paddingTop="22.5dp"
+        android:paddingLeft="9dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/text_grey"
+            android:text="授 课 人："/>
+        <TextView
+            android:id="@+id/tv_lecture_detail_teacher"
+            android:textSize="15sp"
+            tools:text="杜恩博"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"/>
+    </LinearLayout>
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:paddingLeft="9dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/text_grey"
+            android:text="开 课 时 间："/>
+        <TextView
+            android:id="@+id/tv_lecture_detail_begin_time"
+            android:textSize="15sp"
+            tools:text="2017.6.1-2017.9.10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"/>
+    </LinearLayout>
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:paddingLeft="9dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/text_grey"
+            android:text="开 课 地 点："/>
+        <TextView
+            android:id="@+id/tv_lecture_detail_location"
+            android:textSize="15sp"
+            tools:text="东九教学楼"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"/>
+    </LinearLayout>
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:paddingLeft="9dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/text_grey"
+            android:text="课 程 时 间："/>
+        <TextView
+            android:id="@+id/tv_lecture_detail_class_time"
+            android:textSize="15sp"
+            tools:text="7:00-9:00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"/>
+    </LinearLayout>
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:paddingLeft="9dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/text_grey"
+            android:text="课 程 类 型："/>
+        <TextView
+            android:id="@+id/tv_lecture_detail_class_type"
+            android:textSize="15sp"
+            tools:text="编程"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"/>
+    </LinearLayout>
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:paddingLeft="9dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/text_grey"
+            android:text="课 程 介 绍："/>
+        <TextView
+            android:id="@+id/tv_lecture_detail_class_introduction"
+            android:textSize="15sp"
+            tools:text="大佬带你从入门到精通"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+        <Button
+            android:layout_marginBottom="80dp"
+            android:text="加入课堂"
+            android:id="@+id/btn_join_lecture"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_button"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
 </LinearLayout>
