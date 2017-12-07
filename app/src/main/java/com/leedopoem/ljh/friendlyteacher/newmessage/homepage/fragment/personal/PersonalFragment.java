@@ -46,6 +46,7 @@ public class PersonalFragment extends Fragment implements PersonalConstract.View
     private CardView AboutusBtn;
     private Context context;
 
+
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);

@@ -1,17 +1,16 @@
 package com.leedopoem.ljh.friendlyteacher.data.source.remote.retrofit;
 
 import com.google.gson.GsonBuilder;
-import com.leedopoem.ljh.friendlyteacher.data.source.remote.IRemoteDataSource;
-import com.leedopoem.ljh.friendlyteacher.data.source.remote.retrofit.api.LectureService;
 import com.leedopoem.ljh.friendlyteacher.data.entity.Book;
 import com.leedopoem.ljh.friendlyteacher.data.entity.Lecture;
 import com.leedopoem.ljh.friendlyteacher.data.entity.Result;
 import com.leedopoem.ljh.friendlyteacher.data.entity.User;
+import com.leedopoem.ljh.friendlyteacher.data.source.remote.IRemoteDataSource;
+import com.leedopoem.ljh.friendlyteacher.data.source.remote.retrofit.api.LectureService;
 
 import java.util.List;
 
 import io.reactivex.Observable;
-import io.reactivex.Scheduler;
 import io.reactivex.schedulers.Schedulers;
 import okhttp3.MediaType;
 import okhttp3.RequestBody;
@@ -70,15 +69,21 @@ public class ApiServiceManager implements IRemoteDataSource{
         try {
             list=lectureService.getAllLectures().subscribeOn(Schedulers.io());
         }catch (Exception e){
-            ExceptionHandler.netWorkError(e);
+            ExceptionHandler.handleException(e);
         }
         return list;
     }
 
     @Override
     public Observable<Result> publishLecture(Lecture lecture,String token) {
-        return lectureService.publishLecture(RequestBody.create(MediaType.parse("application/json")
-                ,lecture.toString()),token).subscribeOn(Schedulers.io());
+        try {
+
+            return lectureService.publishLecture(RequestBody.create(MediaType.parse("application/json")
+                    ,lecture.toString()),token).subscribeOn(Schedulers.io());
+        } catch (Exception e) {
+            ExceptionHandler.handleException(e);
+        }
+        return null;
     }
 
     @Override
